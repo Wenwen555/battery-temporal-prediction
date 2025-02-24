@@ -1,0 +1,911 @@
+=============================================
+Dataset: cell_HUST_batch1_prepocess_data
+Mode:    supervised_with_contrast
+=============================================
+Training started ....
+
+Epoch : 1
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [0.0003]
+
+
+Epoch : 2
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [0.0003]
+
+
+Epoch : 3
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [0.0003]
+
+
+Epoch : 4
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [0.0003]
+
+
+Epoch : 5
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [0.0003]
+
+
+Epoch : 6
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [0.0003]
+
+
+Epoch : 7
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [0.0003]
+
+
+Epoch : 8
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [0.0003]
+
+
+Epoch : 9
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [0.0003]
+
+
+Epoch : 10
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [0.0003]
+
+
+Epoch : 11
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 12
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 13
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 14
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 15
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 16
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 17
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 18
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 19
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 20
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 21
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 22
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3e-06]
+
+
+Epoch : 23
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3e-06]
+
+
+Epoch : 24
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3e-06]
+
+
+Epoch : 25
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3e-06]
+
+
+Epoch : 26
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3e-06]
+
+
+Epoch : 27
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3e-06]
+
+
+Epoch : 28
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3e-06]
+
+
+Epoch : 29
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3e-06]
+
+
+Epoch : 30
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3e-06]
+
+
+Epoch : 31
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3e-06]
+
+
+Epoch : 32
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3e-06]
+
+
+Epoch : 33
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 34
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 35
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 36
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 37
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 38
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 39
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 40
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 41
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 42
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 43
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 44
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 45
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 46
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 47
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 48
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 49
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 50
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 51
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 52
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 53
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 54
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 55
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 56
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 57
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 58
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 59
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 60
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 61
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 62
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 63
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 64
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 65
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 66
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 67
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 68
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 69
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 70
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 71
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 72
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 73
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 74
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 75
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 76
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 77
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 78
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 79
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 80
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 81
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 82
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 83
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 84
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 85
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 86
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 87
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 88
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 89
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 90
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 91
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 92
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 93
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 94
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 95
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 96
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 97
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 98
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 99
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 100
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 101
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 102
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 103
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 104
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 105
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 106
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 107
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 108
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 109
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 110
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 111
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 112
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 113
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 114
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 115
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 116
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 117
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 118
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 119
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 120
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 121
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 122
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 123
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 124
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 125
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 126
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 127
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 128
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 129
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 130
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 131
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 132
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 133
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 134
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 135
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 136
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 137
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 138
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 139
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 140
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 141
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 142
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 143
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 144
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 145
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 146
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 147
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 148
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 149
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 150
+Train MSE Loss     : nan	 | 	Train MAPE Loss     : nan
+Valid MSE Loss     : nan	 | 	Valid MAPE Loss     : nan
+lr                 : [3.0000000000000004e-09]
+
+
+Evaluate on the Test set:
+Test MAPE loss      :3342.540771	 | Test MSE loss      : 1284000000.000000
+
+################## Training is Done! #########################
+Training time is : 0:00:15.749563

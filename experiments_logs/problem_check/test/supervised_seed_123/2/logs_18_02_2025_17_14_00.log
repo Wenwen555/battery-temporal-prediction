@@ -1,0 +1,47 @@
+=============================================
+Dataset: cell_Tongji_NCA_data
+Mode:    supervised
+=============================================
+Training started ....
+
+Epoch : 1
+Train MSE Loss     : 0.00839749	 | 	Train MAPE Loss     : 6.13887739
+Valid MSE Loss     : 0.00171304	 | 	Valid MAPE Loss     : 3.83657384
+lr                 : [0.0003]
+
+
+Epoch : 2
+Train MSE Loss     : 0.00065445	 | 	Train MAPE Loss     : 2.28736973
+Valid MSE Loss     : 0.00095022	 | 	Valid MAPE Loss     : 2.66757798
+lr                 : [0.0003]
+
+
+Epoch : 3
+Train MSE Loss     : 0.00026160	 | 	Train MAPE Loss     : 1.34526908
+Valid MSE Loss     : 0.00066898	 | 	Valid MAPE Loss     : 2.24630833
+lr                 : [0.0003]
+
+
+Epoch : 4
+Train MSE Loss     : 0.00026395	 | 	Train MAPE Loss     : 1.41079676
+Valid MSE Loss     : 0.00058559	 | 	Valid MAPE Loss     : 2.10608435
+lr                 : [0.0003]
+
+
+Epoch : 5
+Train MSE Loss     : 0.00028765	 | 	Train MAPE Loss     : 1.41555691
+Valid MSE Loss     : 0.00066842	 | 	Valid MAPE Loss     : 2.23654318
+lr                 : [0.0003]
+
+
+Epoch : 6
+Train MSE Loss     : 0.00023406	 | 	Train MAPE Loss     : 1.36331272
+Valid MSE Loss     : 0.00058345	 | 	Valid MAPE Loss     : 2.11480784
+lr                 : [0.0003]
+
+
+Epoch : 7
+Train MSE Loss     : 0.00053761	 | 	Train MAPE Loss     : 2.13665152
+Valid MSE Loss     : 0.00144330	 | 	Valid MAPE Loss     : 3.65543675
+lr                 : [0.0003]
+

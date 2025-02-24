@@ -1,0 +1,11 @@
+=============================================
+Dataset: cell_XJTU_batch2_prepocess_data
+Mode:    supervised
+=============================================
+Training started ....
+
+Epoch : 1
+Train MSE Loss     : 10.78640461	 | 	Train MAPE Loss     : 259.22937012
+Valid MSE Loss     : 5.39456081	 | 	Valid MAPE Loss     : 235.59101868
+lr                 : [0.0003]
+

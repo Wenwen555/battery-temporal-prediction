@@ -1,0 +1,911 @@
+=============================================
+Dataset: cell_XJTU_batch2_prepocess_data
+Mode:    supervised
+=============================================
+Training started ....
+
+Epoch : 1
+Train MSE Loss     : 0.02516003	 | 	Train MAPE Loss     : 12.69596004
+Valid MSE Loss     : 0.00030154	 | 	Valid MAPE Loss     : 1.54901695
+lr                 : [0.0003]
+
+
+Epoch : 2
+Train MSE Loss     : 0.00111185	 | 	Train MAPE Loss     : 2.99234724
+Valid MSE Loss     : 0.00026587	 | 	Valid MAPE Loss     : 1.38361454
+lr                 : [0.0003]
+
+
+Epoch : 3
+Train MSE Loss     : 0.00043318	 | 	Train MAPE Loss     : 1.83939517
+Valid MSE Loss     : 0.00032233	 | 	Valid MAPE Loss     : 1.57165968
+lr                 : [0.0003]
+
+
+Epoch : 4
+Train MSE Loss     : 0.00027684	 | 	Train MAPE Loss     : 1.46132708
+Valid MSE Loss     : 0.00019467	 | 	Valid MAPE Loss     : 1.19409072
+lr                 : [0.0003]
+
+
+Epoch : 5
+Train MSE Loss     : 0.00018739	 | 	Train MAPE Loss     : 1.16700196
+Valid MSE Loss     : 0.00015858	 | 	Valid MAPE Loss     : 1.06706715
+lr                 : [0.0003]
+
+
+Epoch : 6
+Train MSE Loss     : 0.00014519	 | 	Train MAPE Loss     : 1.00955272
+Valid MSE Loss     : 0.00019519	 | 	Valid MAPE Loss     : 1.31095016
+lr                 : [0.0003]
+
+
+Epoch : 7
+Train MSE Loss     : 0.00014651	 | 	Train MAPE Loss     : 1.02073276
+Valid MSE Loss     : 0.00020308	 | 	Valid MAPE Loss     : 1.34924185
+lr                 : [0.0003]
+
+
+Epoch : 8
+Train MSE Loss     : 0.00013783	 | 	Train MAPE Loss     : 0.98062515
+Valid MSE Loss     : 0.00024959	 | 	Valid MAPE Loss     : 1.51880932
+lr                 : [0.0003]
+
+
+Epoch : 9
+Train MSE Loss     : 0.00014288	 | 	Train MAPE Loss     : 1.01438844
+Valid MSE Loss     : 0.00030636	 | 	Valid MAPE Loss     : 1.70563269
+lr                 : [0.0003]
+
+
+Epoch : 10
+Train MSE Loss     : 0.00013523	 | 	Train MAPE Loss     : 0.97914648
+Valid MSE Loss     : 0.00012651	 | 	Valid MAPE Loss     : 0.97365195
+lr                 : [0.0003]
+
+
+Epoch : 11
+Train MSE Loss     : 0.00012522	 | 	Train MAPE Loss     : 0.93958122
+Valid MSE Loss     : 0.00012064	 | 	Valid MAPE Loss     : 0.94765139
+lr                 : [0.0003]
+
+
+Epoch : 12
+Train MSE Loss     : 0.00019804	 | 	Train MAPE Loss     : 1.22966802
+Valid MSE Loss     : 0.00042843	 | 	Valid MAPE Loss     : 2.07293582
+lr                 : [0.0003]
+
+
+Epoch : 13
+Train MSE Loss     : 0.00017567	 | 	Train MAPE Loss     : 1.15596855
+Valid MSE Loss     : 0.00019609	 | 	Valid MAPE Loss     : 1.33212781
+lr                 : [0.0003]
+
+
+Epoch : 14
+Train MSE Loss     : 0.00012164	 | 	Train MAPE Loss     : 0.92576659
+Valid MSE Loss     : 0.00011783	 | 	Valid MAPE Loss     : 0.84167004
+lr                 : [0.0003]
+
+
+Epoch : 15
+Train MSE Loss     : 0.00012733	 | 	Train MAPE Loss     : 0.95830166
+Valid MSE Loss     : 0.00018341	 | 	Valid MAPE Loss     : 1.29990673
+lr                 : [0.0003]
+
+
+Epoch : 16
+Train MSE Loss     : 0.00013981	 | 	Train MAPE Loss     : 1.00319564
+Valid MSE Loss     : 0.00030990	 | 	Valid MAPE Loss     : 1.73366451
+lr                 : [0.0003]
+
+
+Epoch : 17
+Train MSE Loss     : 0.00019948	 | 	Train MAPE Loss     : 1.24020278
+Valid MSE Loss     : 0.00014165	 | 	Valid MAPE Loss     : 1.09569979
+lr                 : [0.0003]
+
+
+Epoch : 18
+Train MSE Loss     : 0.00023685	 | 	Train MAPE Loss     : 1.35958469
+Valid MSE Loss     : 0.00022153	 | 	Valid MAPE Loss     : 1.23467815
+lr                 : [0.0003]
+
+
+Epoch : 19
+Train MSE Loss     : 0.00020024	 | 	Train MAPE Loss     : 1.23639154
+Valid MSE Loss     : 0.00034799	 | 	Valid MAPE Loss     : 1.84647930
+lr                 : [0.0003]
+
+
+Epoch : 20
+Train MSE Loss     : 0.00016849	 | 	Train MAPE Loss     : 1.12413466
+Valid MSE Loss     : 0.00012250	 | 	Valid MAPE Loss     : 1.00062895
+lr                 : [0.0003]
+
+
+Epoch : 21
+Train MSE Loss     : 0.00016372	 | 	Train MAPE Loss     : 1.10145843
+Valid MSE Loss     : 0.00015954	 | 	Valid MAPE Loss     : 1.20417202
+lr                 : [0.0003]
+
+
+Epoch : 22
+Train MSE Loss     : 0.00020674	 | 	Train MAPE Loss     : 1.27961290
+Valid MSE Loss     : 0.00011177	 | 	Valid MAPE Loss     : 0.80305535
+lr                 : [0.0003]
+
+
+Epoch : 23
+Train MSE Loss     : 0.00013021	 | 	Train MAPE Loss     : 0.96484649
+Valid MSE Loss     : 0.00014737	 | 	Valid MAPE Loss     : 1.15417755
+lr                 : [0.0003]
+
+
+Epoch : 24
+Train MSE Loss     : 0.00021830	 | 	Train MAPE Loss     : 1.26979280
+Valid MSE Loss     : 0.00038772	 | 	Valid MAPE Loss     : 1.95590746
+lr                 : [0.0003]
+
+
+Epoch : 25
+Train MSE Loss     : 0.00022994	 | 	Train MAPE Loss     : 1.34380925
+Valid MSE Loss     : 0.00033383	 | 	Valid MAPE Loss     : 1.79987276
+lr                 : [0.0003]
+
+
+Epoch : 26
+Train MSE Loss     : 0.00019062	 | 	Train MAPE Loss     : 1.20890868
+Valid MSE Loss     : 0.00014191	 | 	Valid MAPE Loss     : 1.12137544
+lr                 : [0.0003]
+
+
+Epoch : 27
+Train MSE Loss     : 0.00013340	 | 	Train MAPE Loss     : 0.97733974
+Valid MSE Loss     : 0.00024532	 | 	Valid MAPE Loss     : 1.53090918
+lr                 : [0.0003]
+
+
+Epoch : 28
+Train MSE Loss     : 0.00027717	 | 	Train MAPE Loss     : 1.50680423
+Valid MSE Loss     : 0.00011219	 | 	Valid MAPE Loss     : 0.91903847
+lr                 : [0.0003]
+
+
+Epoch : 29
+Train MSE Loss     : 0.00016933	 | 	Train MAPE Loss     : 1.13281274
+Valid MSE Loss     : 0.00014326	 | 	Valid MAPE Loss     : 1.13576877
+lr                 : [0.0003]
+
+
+Epoch : 30
+Train MSE Loss     : 0.00014233	 | 	Train MAPE Loss     : 1.01928055
+Valid MSE Loss     : 0.00011402	 | 	Valid MAPE Loss     : 0.97473758
+lr                 : [0.0003]
+
+
+Epoch : 31
+Train MSE Loss     : 0.00019652	 | 	Train MAPE Loss     : 1.22410703
+Valid MSE Loss     : 0.00018511	 | 	Valid MAPE Loss     : 1.31276333
+lr                 : [0.0003]
+
+
+Epoch : 32
+Train MSE Loss     : 0.00024773	 | 	Train MAPE Loss     : 1.37916708
+Valid MSE Loss     : 0.00083798	 | 	Valid MAPE Loss     : 3.04406261
+lr                 : [0.0003]
+
+
+Epoch : 33
+Train MSE Loss     : 0.00032415	 | 	Train MAPE Loss     : 1.61786270
+Valid MSE Loss     : 0.00011408	 | 	Valid MAPE Loss     : 0.78373355
+lr                 : [0.0003]
+
+
+Epoch : 34
+Train MSE Loss     : 0.00018360	 | 	Train MAPE Loss     : 1.18522096
+Valid MSE Loss     : 0.00044774	 | 	Valid MAPE Loss     : 2.14971161
+lr                 : [0.0003]
+
+
+Epoch : 35
+Train MSE Loss     : 0.00017768	 | 	Train MAPE Loss     : 1.15122938
+Valid MSE Loss     : 0.00010151	 | 	Valid MAPE Loss     : 0.84694439
+lr                 : [0.0003]
+
+
+Epoch : 36
+Train MSE Loss     : 0.00012580	 | 	Train MAPE Loss     : 0.96089095
+Valid MSE Loss     : 0.00013971	 | 	Valid MAPE Loss     : 1.12502038
+lr                 : [0.0003]
+
+
+Epoch : 37
+Train MSE Loss     : 0.00014721	 | 	Train MAPE Loss     : 1.04661012
+Valid MSE Loss     : 0.00010531	 | 	Valid MAPE Loss     : 0.92558366
+lr                 : [0.0003]
+
+
+Epoch : 38
+Train MSE Loss     : 0.00018376	 | 	Train MAPE Loss     : 1.18181968
+Valid MSE Loss     : 0.00044358	 | 	Valid MAPE Loss     : 2.14228749
+lr                 : [0.0003]
+
+
+Epoch : 39
+Train MSE Loss     : 0.00019454	 | 	Train MAPE Loss     : 1.23593915
+Valid MSE Loss     : 0.00013759	 | 	Valid MAPE Loss     : 1.11098099
+lr                 : [0.0003]
+
+
+Epoch : 40
+Train MSE Loss     : 0.00013788	 | 	Train MAPE Loss     : 0.99970782
+Valid MSE Loss     : 0.00010958	 | 	Valid MAPE Loss     : 0.96846360
+lr                 : [0.0003]
+
+
+Epoch : 41
+Train MSE Loss     : 0.00022588	 | 	Train MAPE Loss     : 1.33828771
+Valid MSE Loss     : 0.00023881	 | 	Valid MAPE Loss     : 1.50863123
+lr                 : [0.0003]
+
+
+Epoch : 42
+Train MSE Loss     : 0.00025172	 | 	Train MAPE Loss     : 1.42278659
+Valid MSE Loss     : 0.00016226	 | 	Valid MAPE Loss     : 1.20961273
+lr                 : [0.0003]
+
+
+Epoch : 43
+Train MSE Loss     : 0.00021915	 | 	Train MAPE Loss     : 1.29602110
+Valid MSE Loss     : 0.00010246	 | 	Valid MAPE Loss     : 0.89124221
+lr                 : [0.0003]
+
+
+Epoch : 44
+Train MSE Loss     : 0.00013850	 | 	Train MAPE Loss     : 1.00873506
+Valid MSE Loss     : 0.00009436	 | 	Valid MAPE Loss     : 0.78649300
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 45
+Train MSE Loss     : 0.00010490	 | 	Train MAPE Loss     : 0.85776806
+Valid MSE Loss     : 0.00012832	 | 	Valid MAPE Loss     : 1.07118809
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 46
+Train MSE Loss     : 0.00010048	 | 	Train MAPE Loss     : 0.83546847
+Valid MSE Loss     : 0.00014655	 | 	Valid MAPE Loss     : 1.15416503
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 47
+Train MSE Loss     : 0.00010015	 | 	Train MAPE Loss     : 0.83440924
+Valid MSE Loss     : 0.00011865	 | 	Valid MAPE Loss     : 1.02402163
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 48
+Train MSE Loss     : 0.00009944	 | 	Train MAPE Loss     : 0.82753992
+Valid MSE Loss     : 0.00015638	 | 	Valid MAPE Loss     : 1.19583023
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 49
+Train MSE Loss     : 0.00009984	 | 	Train MAPE Loss     : 0.83276445
+Valid MSE Loss     : 0.00012627	 | 	Valid MAPE Loss     : 1.06520140
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 50
+Train MSE Loss     : 0.00010110	 | 	Train MAPE Loss     : 0.83729899
+Valid MSE Loss     : 0.00014291	 | 	Valid MAPE Loss     : 1.14304352
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 51
+Train MSE Loss     : 0.00010105	 | 	Train MAPE Loss     : 0.83844739
+Valid MSE Loss     : 0.00009482	 | 	Valid MAPE Loss     : 0.86709118
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 52
+Train MSE Loss     : 0.00010210	 | 	Train MAPE Loss     : 0.83992940
+Valid MSE Loss     : 0.00012230	 | 	Valid MAPE Loss     : 1.04433453
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 53
+Train MSE Loss     : 0.00010377	 | 	Train MAPE Loss     : 0.85506582
+Valid MSE Loss     : 0.00010360	 | 	Valid MAPE Loss     : 0.93915576
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 54
+Train MSE Loss     : 0.00009880	 | 	Train MAPE Loss     : 0.82698619
+Valid MSE Loss     : 0.00011442	 | 	Valid MAPE Loss     : 1.00566709
+lr                 : [2.9999999999999997e-05]
+
+
+Epoch : 55
+Train MSE Loss     : 0.00009952	 | 	Train MAPE Loss     : 0.82811230
+Valid MSE Loss     : 0.00009650	 | 	Valid MAPE Loss     : 0.89416069
+lr                 : [3e-06]
+
+
+Epoch : 56
+Train MSE Loss     : 0.00009833	 | 	Train MAPE Loss     : 0.82836550
+Valid MSE Loss     : 0.00009802	 | 	Valid MAPE Loss     : 0.90585786
+lr                 : [3e-06]
+
+
+Epoch : 57
+Train MSE Loss     : 0.00009780	 | 	Train MAPE Loss     : 0.82537305
+Valid MSE Loss     : 0.00010950	 | 	Valid MAPE Loss     : 0.97882360
+lr                 : [3e-06]
+
+
+Epoch : 58
+Train MSE Loss     : 0.00009619	 | 	Train MAPE Loss     : 0.81282121
+Valid MSE Loss     : 0.00011686	 | 	Valid MAPE Loss     : 1.01980412
+lr                 : [3e-06]
+
+
+Epoch : 59
+Train MSE Loss     : 0.00009652	 | 	Train MAPE Loss     : 0.81628168
+Valid MSE Loss     : 0.00010707	 | 	Valid MAPE Loss     : 0.96481371
+lr                 : [3e-06]
+
+
+Epoch : 60
+Train MSE Loss     : 0.00009629	 | 	Train MAPE Loss     : 0.81547582
+Valid MSE Loss     : 0.00012305	 | 	Valid MAPE Loss     : 1.05139577
+lr                 : [3e-06]
+
+
+Epoch : 61
+Train MSE Loss     : 0.00009660	 | 	Train MAPE Loss     : 0.81809819
+Valid MSE Loss     : 0.00010584	 | 	Valid MAPE Loss     : 0.95796824
+lr                 : [3e-06]
+
+
+Epoch : 62
+Train MSE Loss     : 0.00009623	 | 	Train MAPE Loss     : 0.81193000
+Valid MSE Loss     : 0.00011461	 | 	Valid MAPE Loss     : 1.00821209
+lr                 : [3e-06]
+
+
+Epoch : 63
+Train MSE Loss     : 0.00009640	 | 	Train MAPE Loss     : 0.81646651
+Valid MSE Loss     : 0.00012769	 | 	Valid MAPE Loss     : 1.07427275
+lr                 : [3e-06]
+
+
+Epoch : 64
+Train MSE Loss     : 0.00009693	 | 	Train MAPE Loss     : 0.81876242
+Valid MSE Loss     : 0.00010888	 | 	Valid MAPE Loss     : 0.97661668
+lr                 : [3e-06]
+
+
+Epoch : 65
+Train MSE Loss     : 0.00009637	 | 	Train MAPE Loss     : 0.81677896
+Valid MSE Loss     : 0.00010802	 | 	Valid MAPE Loss     : 0.97161716
+lr                 : [3e-06]
+
+
+Epoch : 66
+Train MSE Loss     : 0.00009632	 | 	Train MAPE Loss     : 0.81515503
+Valid MSE Loss     : 0.00010853	 | 	Valid MAPE Loss     : 0.97444588
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 67
+Train MSE Loss     : 0.00009550	 | 	Train MAPE Loss     : 0.81087685
+Valid MSE Loss     : 0.00011593	 | 	Valid MAPE Loss     : 1.01593947
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 68
+Train MSE Loss     : 0.00009530	 | 	Train MAPE Loss     : 0.81033498
+Valid MSE Loss     : 0.00011249	 | 	Valid MAPE Loss     : 0.99717456
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 69
+Train MSE Loss     : 0.00009548	 | 	Train MAPE Loss     : 0.81224316
+Valid MSE Loss     : 0.00011518	 | 	Valid MAPE Loss     : 1.01201737
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 70
+Train MSE Loss     : 0.00009544	 | 	Train MAPE Loss     : 0.80963343
+Valid MSE Loss     : 0.00011412	 | 	Valid MAPE Loss     : 1.00628948
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 71
+Train MSE Loss     : 0.00009570	 | 	Train MAPE Loss     : 0.81089771
+Valid MSE Loss     : 0.00011483	 | 	Valid MAPE Loss     : 1.01003253
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 72
+Train MSE Loss     : 0.00009547	 | 	Train MAPE Loss     : 0.81269467
+Valid MSE Loss     : 0.00011233	 | 	Valid MAPE Loss     : 0.99639755
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 73
+Train MSE Loss     : 0.00009526	 | 	Train MAPE Loss     : 0.80951136
+Valid MSE Loss     : 0.00011342	 | 	Valid MAPE Loss     : 1.00239706
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 74
+Train MSE Loss     : 0.00009523	 | 	Train MAPE Loss     : 0.80906904
+Valid MSE Loss     : 0.00011337	 | 	Valid MAPE Loss     : 1.00241148
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 75
+Train MSE Loss     : 0.00009562	 | 	Train MAPE Loss     : 0.81189281
+Valid MSE Loss     : 0.00011357	 | 	Valid MAPE Loss     : 1.00361645
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 76
+Train MSE Loss     : 0.00009543	 | 	Train MAPE Loss     : 0.81116402
+Valid MSE Loss     : 0.00011058	 | 	Valid MAPE Loss     : 0.98658562
+lr                 : [3.0000000000000004e-07]
+
+
+Epoch : 77
+Train MSE Loss     : 0.00009549	 | 	Train MAPE Loss     : 0.81174362
+Valid MSE Loss     : 0.00011331	 | 	Valid MAPE Loss     : 1.00190747
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 78
+Train MSE Loss     : 0.00009563	 | 	Train MAPE Loss     : 0.81154460
+Valid MSE Loss     : 0.00011316	 | 	Valid MAPE Loss     : 1.00107419
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 79
+Train MSE Loss     : 0.00009578	 | 	Train MAPE Loss     : 0.81299293
+Valid MSE Loss     : 0.00011400	 | 	Valid MAPE Loss     : 1.00567615
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 80
+Train MSE Loss     : 0.00009527	 | 	Train MAPE Loss     : 0.81031024
+Valid MSE Loss     : 0.00011335	 | 	Valid MAPE Loss     : 1.00216913
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 81
+Train MSE Loss     : 0.00009562	 | 	Train MAPE Loss     : 0.81178808
+Valid MSE Loss     : 0.00011330	 | 	Valid MAPE Loss     : 1.00186288
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 82
+Train MSE Loss     : 0.00009563	 | 	Train MAPE Loss     : 0.81140155
+Valid MSE Loss     : 0.00011280	 | 	Valid MAPE Loss     : 0.99914294
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 83
+Train MSE Loss     : 0.00009551	 | 	Train MAPE Loss     : 0.81146401
+Valid MSE Loss     : 0.00011332	 | 	Valid MAPE Loss     : 1.00194776
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 84
+Train MSE Loss     : 0.00009562	 | 	Train MAPE Loss     : 0.81146985
+Valid MSE Loss     : 0.00011357	 | 	Valid MAPE Loss     : 1.00339806
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 85
+Train MSE Loss     : 0.00009377	 | 	Train MAPE Loss     : 0.80805224
+Valid MSE Loss     : 0.00011306	 | 	Valid MAPE Loss     : 1.00052226
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 86
+Train MSE Loss     : 0.00009537	 | 	Train MAPE Loss     : 0.81060916
+Valid MSE Loss     : 0.00011340	 | 	Valid MAPE Loss     : 1.00242984
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 87
+Train MSE Loss     : 0.00009558	 | 	Train MAPE Loss     : 0.81149757
+Valid MSE Loss     : 0.00011395	 | 	Valid MAPE Loss     : 1.00542510
+lr                 : [3.0000000000000004e-08]
+
+
+Epoch : 88
+Train MSE Loss     : 0.00009147	 | 	Train MAPE Loss     : 0.80600357
+Valid MSE Loss     : 0.00011300	 | 	Valid MAPE Loss     : 1.00021052
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 89
+Train MSE Loss     : 0.00009566	 | 	Train MAPE Loss     : 0.81204641
+Valid MSE Loss     : 0.00011301	 | 	Valid MAPE Loss     : 1.00032008
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 90
+Train MSE Loss     : 0.00009573	 | 	Train MAPE Loss     : 0.81238806
+Valid MSE Loss     : 0.00011302	 | 	Valid MAPE Loss     : 1.00033271
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 91
+Train MSE Loss     : 0.00009529	 | 	Train MAPE Loss     : 0.80970222
+Valid MSE Loss     : 0.00011301	 | 	Valid MAPE Loss     : 1.00030291
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 92
+Train MSE Loss     : 0.00009547	 | 	Train MAPE Loss     : 0.81098443
+Valid MSE Loss     : 0.00011301	 | 	Valid MAPE Loss     : 1.00027931
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 93
+Train MSE Loss     : 0.00009560	 | 	Train MAPE Loss     : 0.81143475
+Valid MSE Loss     : 0.00011309	 | 	Valid MAPE Loss     : 1.00070536
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 94
+Train MSE Loss     : 0.00009546	 | 	Train MAPE Loss     : 0.81063813
+Valid MSE Loss     : 0.00011310	 | 	Valid MAPE Loss     : 1.00074482
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 95
+Train MSE Loss     : 0.00009542	 | 	Train MAPE Loss     : 0.81086099
+Valid MSE Loss     : 0.00011312	 | 	Valid MAPE Loss     : 1.00083971
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 96
+Train MSE Loss     : 0.00009551	 | 	Train MAPE Loss     : 0.81068277
+Valid MSE Loss     : 0.00011309	 | 	Valid MAPE Loss     : 1.00069582
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 97
+Train MSE Loss     : 0.00009561	 | 	Train MAPE Loss     : 0.81140184
+Valid MSE Loss     : 0.00011312	 | 	Valid MAPE Loss     : 1.00088549
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 98
+Train MSE Loss     : 0.00009515	 | 	Train MAPE Loss     : 0.80903739
+Valid MSE Loss     : 0.00011319	 | 	Valid MAPE Loss     : 1.00122476
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 99
+Train MSE Loss     : 0.00009552	 | 	Train MAPE Loss     : 0.81130278
+Valid MSE Loss     : 0.00011320	 | 	Valid MAPE Loss     : 1.00132883
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 100
+Train MSE Loss     : 0.00009534	 | 	Train MAPE Loss     : 0.81039685
+Valid MSE Loss     : 0.00011318	 | 	Valid MAPE Loss     : 1.00116348
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 101
+Train MSE Loss     : 0.00009546	 | 	Train MAPE Loss     : 0.81166726
+Valid MSE Loss     : 0.00011315	 | 	Valid MAPE Loss     : 1.00103855
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 102
+Train MSE Loss     : 0.00009514	 | 	Train MAPE Loss     : 0.80923128
+Valid MSE Loss     : 0.00011314	 | 	Valid MAPE Loss     : 1.00099432
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 103
+Train MSE Loss     : 0.00009506	 | 	Train MAPE Loss     : 0.80917633
+Valid MSE Loss     : 0.00011320	 | 	Valid MAPE Loss     : 1.00130999
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 104
+Train MSE Loss     : 0.00009566	 | 	Train MAPE Loss     : 0.81163484
+Valid MSE Loss     : 0.00011321	 | 	Valid MAPE Loss     : 1.00135887
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 105
+Train MSE Loss     : 0.00009561	 | 	Train MAPE Loss     : 0.81130236
+Valid MSE Loss     : 0.00011323	 | 	Valid MAPE Loss     : 1.00146186
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 106
+Train MSE Loss     : 0.00009533	 | 	Train MAPE Loss     : 0.80928409
+Valid MSE Loss     : 0.00011323	 | 	Valid MAPE Loss     : 1.00146234
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 107
+Train MSE Loss     : 0.00009517	 | 	Train MAPE Loss     : 0.80892527
+Valid MSE Loss     : 0.00011324	 | 	Valid MAPE Loss     : 1.00150979
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 108
+Train MSE Loss     : 0.00009542	 | 	Train MAPE Loss     : 0.81068516
+Valid MSE Loss     : 0.00011322	 | 	Valid MAPE Loss     : 1.00139189
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 109
+Train MSE Loss     : 0.00009502	 | 	Train MAPE Loss     : 0.80942965
+Valid MSE Loss     : 0.00011322	 | 	Valid MAPE Loss     : 1.00142968
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 110
+Train MSE Loss     : 0.00009541	 | 	Train MAPE Loss     : 0.81100750
+Valid MSE Loss     : 0.00011327	 | 	Valid MAPE Loss     : 1.00168931
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 111
+Train MSE Loss     : 0.00009558	 | 	Train MAPE Loss     : 0.81102544
+Valid MSE Loss     : 0.00011320	 | 	Valid MAPE Loss     : 1.00130880
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 112
+Train MSE Loss     : 0.00009574	 | 	Train MAPE Loss     : 0.81253064
+Valid MSE Loss     : 0.00011325	 | 	Valid MAPE Loss     : 1.00157893
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 113
+Train MSE Loss     : 0.00009565	 | 	Train MAPE Loss     : 0.81208742
+Valid MSE Loss     : 0.00011325	 | 	Valid MAPE Loss     : 1.00162911
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 114
+Train MSE Loss     : 0.00009548	 | 	Train MAPE Loss     : 0.81080425
+Valid MSE Loss     : 0.00011325	 | 	Valid MAPE Loss     : 1.00162089
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 115
+Train MSE Loss     : 0.00009557	 | 	Train MAPE Loss     : 0.81146508
+Valid MSE Loss     : 0.00011322	 | 	Valid MAPE Loss     : 1.00145686
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 116
+Train MSE Loss     : 0.00009547	 | 	Train MAPE Loss     : 0.81044209
+Valid MSE Loss     : 0.00011325	 | 	Valid MAPE Loss     : 1.00163734
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 117
+Train MSE Loss     : 0.00009540	 | 	Train MAPE Loss     : 0.81089056
+Valid MSE Loss     : 0.00011323	 | 	Valid MAPE Loss     : 1.00150549
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 118
+Train MSE Loss     : 0.00009544	 | 	Train MAPE Loss     : 0.81064880
+Valid MSE Loss     : 0.00011329	 | 	Valid MAPE Loss     : 1.00180757
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 119
+Train MSE Loss     : 0.00009524	 | 	Train MAPE Loss     : 0.80999774
+Valid MSE Loss     : 0.00011329	 | 	Valid MAPE Loss     : 1.00180757
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 120
+Train MSE Loss     : 0.00009504	 | 	Train MAPE Loss     : 0.80903113
+Valid MSE Loss     : 0.00011326	 | 	Valid MAPE Loss     : 1.00166559
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 121
+Train MSE Loss     : 0.00009520	 | 	Train MAPE Loss     : 0.80971205
+Valid MSE Loss     : 0.00011331	 | 	Valid MAPE Loss     : 1.00189102
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 122
+Train MSE Loss     : 0.00009552	 | 	Train MAPE Loss     : 0.81119108
+Valid MSE Loss     : 0.00011331	 | 	Valid MAPE Loss     : 1.00192106
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 123
+Train MSE Loss     : 0.00009549	 | 	Train MAPE Loss     : 0.81141347
+Valid MSE Loss     : 0.00011325	 | 	Valid MAPE Loss     : 1.00163090
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 124
+Train MSE Loss     : 0.00009543	 | 	Train MAPE Loss     : 0.81131208
+Valid MSE Loss     : 0.00011332	 | 	Valid MAPE Loss     : 1.00201929
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 125
+Train MSE Loss     : 0.00009551	 | 	Train MAPE Loss     : 0.81107366
+Valid MSE Loss     : 0.00011332	 | 	Valid MAPE Loss     : 1.00201154
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 126
+Train MSE Loss     : 0.00009567	 | 	Train MAPE Loss     : 0.81169760
+Valid MSE Loss     : 0.00011332	 | 	Valid MAPE Loss     : 1.00195992
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 127
+Train MSE Loss     : 0.00009539	 | 	Train MAPE Loss     : 0.81030643
+Valid MSE Loss     : 0.00011336	 | 	Valid MAPE Loss     : 1.00220621
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 128
+Train MSE Loss     : 0.00009549	 | 	Train MAPE Loss     : 0.81135494
+Valid MSE Loss     : 0.00011330	 | 	Valid MAPE Loss     : 1.00189173
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 129
+Train MSE Loss     : 0.00009555	 | 	Train MAPE Loss     : 0.81141281
+Valid MSE Loss     : 0.00011335	 | 	Valid MAPE Loss     : 1.00213873
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 130
+Train MSE Loss     : 0.00009559	 | 	Train MAPE Loss     : 0.81136543
+Valid MSE Loss     : 0.00011335	 | 	Valid MAPE Loss     : 1.00215018
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 131
+Train MSE Loss     : 0.00009536	 | 	Train MAPE Loss     : 0.80997324
+Valid MSE Loss     : 0.00011338	 | 	Valid MAPE Loss     : 1.00230134
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 132
+Train MSE Loss     : 0.00009497	 | 	Train MAPE Loss     : 0.80935460
+Valid MSE Loss     : 0.00011338	 | 	Valid MAPE Loss     : 1.00232124
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 133
+Train MSE Loss     : 0.00009558	 | 	Train MAPE Loss     : 0.81127626
+Valid MSE Loss     : 0.00011337	 | 	Valid MAPE Loss     : 1.00223601
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 134
+Train MSE Loss     : 0.00009541	 | 	Train MAPE Loss     : 0.81004906
+Valid MSE Loss     : 0.00011336	 | 	Valid MAPE Loss     : 1.00218725
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 135
+Train MSE Loss     : 0.00009522	 | 	Train MAPE Loss     : 0.80936462
+Valid MSE Loss     : 0.00011340	 | 	Valid MAPE Loss     : 1.00243938
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 136
+Train MSE Loss     : 0.00009510	 | 	Train MAPE Loss     : 0.80964887
+Valid MSE Loss     : 0.00011338	 | 	Valid MAPE Loss     : 1.00230515
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 137
+Train MSE Loss     : 0.00009543	 | 	Train MAPE Loss     : 0.81113338
+Valid MSE Loss     : 0.00011340	 | 	Valid MAPE Loss     : 1.00245821
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 138
+Train MSE Loss     : 0.00009510	 | 	Train MAPE Loss     : 0.80921805
+Valid MSE Loss     : 0.00011339	 | 	Valid MAPE Loss     : 1.00236464
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 139
+Train MSE Loss     : 0.00009524	 | 	Train MAPE Loss     : 0.80965680
+Valid MSE Loss     : 0.00011338	 | 	Valid MAPE Loss     : 1.00229371
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 140
+Train MSE Loss     : 0.00009575	 | 	Train MAPE Loss     : 0.81218368
+Valid MSE Loss     : 0.00011336	 | 	Valid MAPE Loss     : 1.00220335
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 141
+Train MSE Loss     : 0.00009565	 | 	Train MAPE Loss     : 0.81186169
+Valid MSE Loss     : 0.00011337	 | 	Valid MAPE Loss     : 1.00226736
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 142
+Train MSE Loss     : 0.00009512	 | 	Train MAPE Loss     : 0.80961180
+Valid MSE Loss     : 0.00011338	 | 	Valid MAPE Loss     : 1.00229311
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 143
+Train MSE Loss     : 0.00009565	 | 	Train MAPE Loss     : 0.81184214
+Valid MSE Loss     : 0.00011337	 | 	Valid MAPE Loss     : 1.00228012
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 144
+Train MSE Loss     : 0.00009542	 | 	Train MAPE Loss     : 0.81013048
+Valid MSE Loss     : 0.00011337	 | 	Valid MAPE Loss     : 1.00225222
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 145
+Train MSE Loss     : 0.00009546	 | 	Train MAPE Loss     : 0.81122696
+Valid MSE Loss     : 0.00011337	 | 	Valid MAPE Loss     : 1.00229311
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 146
+Train MSE Loss     : 0.00009544	 | 	Train MAPE Loss     : 0.81086552
+Valid MSE Loss     : 0.00011337	 | 	Valid MAPE Loss     : 1.00229204
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 147
+Train MSE Loss     : 0.00009490	 | 	Train MAPE Loss     : 0.80811578
+Valid MSE Loss     : 0.00011337	 | 	Valid MAPE Loss     : 1.00224853
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 148
+Train MSE Loss     : 0.00009537	 | 	Train MAPE Loss     : 0.81087923
+Valid MSE Loss     : 0.00011337	 | 	Valid MAPE Loss     : 1.00226867
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 149
+Train MSE Loss     : 0.00009550	 | 	Train MAPE Loss     : 0.81128997
+Valid MSE Loss     : 0.00011334	 | 	Valid MAPE Loss     : 1.00211680
+lr                 : [3.0000000000000004e-09]
+
+
+Epoch : 150
+Train MSE Loss     : 0.00009534	 | 	Train MAPE Loss     : 0.81070900
+Valid MSE Loss     : 0.00011334	 | 	Valid MAPE Loss     : 1.00215805
+lr                 : [3.0000000000000004e-09]
+
+
+Evaluate on the Test set:
+Test MAPE loss      :0.91519803	 | Test MSE loss      : 0.00010558
+
+################## Training is Done! #########################
+Training time is : 0:01:01.355615

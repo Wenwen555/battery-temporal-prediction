@@ -1,0 +1,47 @@
+=============================================
+Dataset: cell_XJTU_batch2_prepocess_data
+Mode:    supervised_with_contrast
+=============================================
+Training started ....
+
+Epoch : 1
+Train MSE Loss     : 1.09558344	 | 	Train MAPE Loss     : 21.50839233
+Valid MSE Loss     : 0.06052681	 | 	Valid MAPE Loss     : 26.51127625
+lr                 : [0.0003]
+
+
+Epoch : 2
+Train MSE Loss     : 1.00441849	 | 	Train MAPE Loss     : 6.01909447
+Valid MSE Loss     : 0.00135770	 | 	Valid MAPE Loss     : 3.20649266
+lr                 : [0.0003]
+
+
+Epoch : 3
+Train MSE Loss     : 1.00741732	 | 	Train MAPE Loss     : 7.93254185
+Valid MSE Loss     : 0.00099894	 | 	Valid MAPE Loss     : 2.82036161
+lr                 : [0.0003]
+
+
+Epoch : 4
+Train MSE Loss     : 1.01411545	 | 	Train MAPE Loss     : 11.00599670
+Valid MSE Loss     : 0.00143037	 | 	Valid MAPE Loss     : 3.45457602
+lr                 : [0.0003]
+
+
+Epoch : 5
+Train MSE Loss     : 1.01370907	 | 	Train MAPE Loss     : 10.93131447
+Valid MSE Loss     : 0.00057020	 | 	Valid MAPE Loss     : 2.09944320
+lr                 : [0.0003]
+
+
+Epoch : 6
+Train MSE Loss     : 1.00830412	 | 	Train MAPE Loss     : 8.56896973
+Valid MSE Loss     : 0.00079905	 | 	Valid MAPE Loss     : 2.57458282
+lr                 : [0.0003]
+
+
+Epoch : 7
+Train MSE Loss     : 1.00273359	 | 	Train MAPE Loss     : 4.77517366
+Valid MSE Loss     : 0.01404504	 | 	Valid MAPE Loss     : 12.84209156
+lr                 : [0.0003]
+
