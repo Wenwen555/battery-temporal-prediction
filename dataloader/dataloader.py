@@ -55,7 +55,7 @@ class Load_Dataset(Dataset):
                     np.asarray([[cell_data[c]['Current (mA)'][k][:] for k in ks] for c in cycles],
                                dtype=np.float32)
                 )
-        del dataset
+        del dataset, labelset
 
         # using cumsum to calculate the index of the idx of pair:(bat,cyc)
         num_samples = [len(d) for d in records]
@@ -87,23 +87,39 @@ class Load_Dataset(Dataset):
         
         #首先sequence prediction过程暂时不考虑augmentation
         self.samples = []
-        self.samples_aug1 = []
-        self.samples_aug2 = []
         self.samples_labels = []
         window_size = 10
         step = 1
         for idx, bat in enumerate(self.x_data):
             for start in range(0,len(bat)-window_size, step):
                 temp_sample = torch.stack([cyc for cyc in bat[start:start+window_size]])
-                temp_smaple_aug1 = torch.stack([cyc for cyc in self.aug1[idx][start:start+window_size]])
-                temp_smaple_aug2 = torch.stack([cyc for cyc in self.aug2[idx][start:start+window_size]])
                 temp_labels = self.y_data[idx][start:start+window_size]
+                # temp_smaple_aug1 = torch.stack([cyc for cyc in self.aug1[idx][start:start+window_size]])
+                # temp_smaple_aug2 = torch.stack([cyc for cyc in self.aug2[idx][start:start+window_size]])
                 self.samples.append(temp_sample)
-                self.samples_aug1.append(temp_smaple_aug1)
-                self.samples_aug2.append(temp_smaple_aug2)
                 self.samples_labels.append(temp_labels)
-        
+                # self.samples_aug1.append(temp_smaple_aug1)
+                # self.samples_aug2.append(temp_smaple_aug2)
+                
+                
         self.samples_labels = torch.stack(self.samples_labels)
+        del self.x_data, self.y_data
+        
+        self.samples_aug1 = []
+        for idx, bat in enumerate(self.aug1):
+            for start in range(0,len(bat)-window_size, step):
+                temp_smaple_aug1 = torch.stack([cyc for cyc in bat[start:start+window_size]])
+                self.samples_aug1.append(temp_smaple_aug1)
+        del self.aug1
+        
+        self.samples_aug2 = []
+        for idx, bat in enumerate(self.aug2):
+            for start in range(0,len(bat)-window_size, step):
+                temp_smaple_aug2 = torch.stack([cyc for cyc in bat[start:start+window_size]])
+                self.samples_aug2.append(temp_smaple_aug2)
+                
+        del self.aug2        
+        
         self.len = len(self.samples)
 
     def __getitem__(self, index):

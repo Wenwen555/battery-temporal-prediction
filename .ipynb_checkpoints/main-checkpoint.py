@@ -74,7 +74,7 @@ dataset = torch.load(os.path.join(data_path, 'train_val.pt'),weights_only=False)
 test_dataset = torch.load(os.path.join(data_path, "test.pt"),weights_only=False)
 test_dataset = Load_Dataset(test_dataset, configs, training_mode,dataname) 
 test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=batch_size,
-                                          shuffle=False, drop_last=True, num_workers=0)
+                                          shuffle=False, drop_last=True, num_workers=4)
 
 # General Training.
 k_folds = configs.k_fold
@@ -146,9 +146,9 @@ for fold, (train_idx, valid_idx) in enumerate(kf.split(indices)):
     train_dataset = Load_Dataset(train_subset, configs, training_mode, dataname)
     valid_dataset = Load_Dataset(valid_subset, configs, training_mode, dataname)
     train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=32, drop_last=True, shuffle=True,
-                                               num_workers=0)
+                                               num_workers=4)
     valid_loader = torch.utils.data.DataLoader(dataset=valid_dataset, batch_size=32,
-                                               shuffle=False, drop_last=configs.drop_last, num_workers=0,
+                                               shuffle=False, drop_last=configs.drop_last, num_workers=4,
                                                )
 
     if training_mode == "fine_tuned":

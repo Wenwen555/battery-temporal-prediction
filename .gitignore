@@ -3,5 +3,8 @@ data/
 __pycache__/
 .git/
 experiments_logs/
+.ipynb_checkpoints/
 .rsyncignore
+.gitignore
+
 
