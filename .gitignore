@@ -2,4 +2,6 @@ data/
 .idea/
 __pycache__/
 .git/
+experiments_logs/
 .rsyncignore
+

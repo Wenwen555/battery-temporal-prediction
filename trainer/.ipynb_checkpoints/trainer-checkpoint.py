@@ -9,7 +9,7 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 import random
 import torch.nn.functional as F
-# from models.loss import NTXentLoss
+from models.loss import NTXentLoss
 
 # 定义一个MAPE loss
 class MAPELoss(nn.Module):
@@ -66,7 +66,7 @@ def Trainer(model, temporal_contr_model, model_optimizer, temp_cont_optimizer, t
 def model_train(model,  temporal_contr_model, model_optimizer, temp_cont_optimizer, train_loader, config,
                 device, training_mode):
     model.train()
-    # temporal_contr_model.train()
+    temporal_contr_model.train()
 
     total_loss_mse = []
     total_loss_mape = []
@@ -86,24 +86,31 @@ def model_train(model,  temporal_contr_model, model_optimizer, temp_cont_optimiz
         temp_cont_optimizer.zero_grad()
 
         if training_mode == "supervised_with_contrast":
-            predictions, _ = model(cycle_data)
-            _, features1 = model(aug1)
-            _, features2 = model(aug2)
+            predictions, features = model(cycle_data)
+            predictions1, features1 = model(aug1)
+            predictions2, features2 = model(aug2)
             
-            total = torch.mm(features1.squeeze(-1),  torch.transpose(features2.squeeze(-1),0,1))
-            nce = torch.sum(torch.diag(lsoftmax(total))) / (-1 *len(aug1))
+            temp_cont_loss1, temp_cont_feat1 = temporal_contr_model(features1, features2)
+            temp_cont_loss2, temp_cont_feat2 = temporal_contr_model(features2, features1)
             
-            loss_mse_supervised = criterion_1(predictions, cycle_labels.view(-1, 1))
-            loss_mape_supervised = criterion_2(predictions, cycle_labels.view(-1, 1))
+            lambda1 = 1
+            lambda2 = 0.7
+            nt_xent_criterion = NTXentLoss(device, config.batch_size, config.Context_Cont.temperature,
+                                           config.Context_Cont.use_cosine_similarity)
+            cont_loss = (temp_cont_loss1 + temp_cont_loss2) * lambda1 + \
+                   nt_xent_criterion(temp_cont_feat1, temp_cont_feat2) * lambda2
             
-            loss_mse = loss_mse_supervised/loss_mse_supervised.detach() + nce/nce.detach()
+            loss_mse_supervised = criterion_1(predictions, cycle_labels)
+            loss_mape_supervised = criterion_2(predictions, cycle_labels)
+            
+            loss_mse = loss_mse_supervised/loss_mse_supervised.detach() + cont_loss/cont_loss.detach()
             loss_mape = loss_mape_supervised
             
         else:
             output = model(cycle_data)
             predictions, _ = output
-            loss_mse = criterion_1(predictions, cycle_labels.view(-1, 1))
-            loss_mape = criterion_2(predictions, cycle_labels.view(-1, 1))
+            loss_mse = criterion_1(predictions, cycle_labels)
+            loss_mape = criterion_2(predictions, cycle_labels)
 
         total_loss_mse.append(loss_mse.item())
         total_loss_mape.append(loss_mape.item())
@@ -111,7 +118,7 @@ def model_train(model,  temporal_contr_model, model_optimizer, temp_cont_optimiz
         # 不backword loss_mape,只将其作为检测指标考虑.
         # loss_mape.backward()
         model_optimizer.step()
-        # temp_cont_optimizer.step()
+        temp_cont_optimizer.step()
 
     total_loss_mse = torch.tensor(total_loss_mse).mean()
     total_loss_mape = torch.tensor(total_loss_mape).mean()
@@ -120,7 +127,7 @@ def model_train(model,  temporal_contr_model, model_optimizer, temp_cont_optimiz
 
 def model_evaluate(model, temporal_contr_model ,test_dl, device):
     model.eval()
-    # temporal_contr_model.eval()
+    temporal_contr_model.eval()
 
     total_loss_mape = []
     total_loss_mse = []
@@ -133,8 +140,8 @@ def model_evaluate(model, temporal_contr_model ,test_dl, device):
             cycle_data,cycle_labels = data.float().to(device), labels.float().to(device)
             output = model(cycle_data)
             predictions,_ = output
-            loss_mape = criterion_1(predictions, cycle_labels.view(-1, 1))
-            loss_mse = criterion_2(predictions, cycle_labels.view(-1, 1))
+            loss_mape = criterion_1(predictions, cycle_labels)
+            loss_mse = criterion_2(predictions, cycle_labels)
             total_loss_mape.append(loss_mape.item())
             total_loss_mse.append(loss_mse.item())
 

@@ -23,8 +23,6 @@ class Load_Dataset(Dataset):
         labels = []
         data = [d['cycle'] for d in dataset]
         records = []
-        # 初始化 MinMaxScaler
-        scaler = StandardScaler()
 
         if dataset_name == "tongji":
             # ks = ['Ecell/V','<I>/mA', 'Q discharge/mA.h', 'Q charge/mA.h']
@@ -52,26 +50,17 @@ class Load_Dataset(Dataset):
                                dtype=np.float32)
                 )
             else:
-                normalized_results = []
-                for c in cycles:
-                    normalized_cycle = []
-                    for k in ks:
-                        temp_min = cell_data[c][k][:].min()
-                        temp_max = cell_data[c][k][:].max()
-                        normalized_value = (cell_data[c][k][:] - temp_min) / (temp_max - temp_min)
-                        normalized_cycle.append(normalized_value)
-                    normalized_results.append(normalized_cycle)
-                records.append(np.asarray(normalized_results,dtype=np.float32))
-                # records.append(
-                #     np.asarray([[cell_data[c]['Current (mA)'][k][:] for k in ks] for c in cycles],
-                #                dtype=np.float32)
-                # )
+                #先前的数据预处理部分没设计好
+                records.append(
+                    np.asarray([[cell_data[c]['Current (mA)'][k][:] for k in ks] for c in cycles],
+                               dtype=np.float32)
+                )
         del dataset
 
         # using cumsum to calculate the index of the idx of pair:(bat,cyc)
         num_samples = [len(d) for d in records]
         self._cum_sum = np.cumsum(num_samples)
-        self.len = sum(num_samples)
+        
         self.indexes = {}
         start = 0
         for i, s in enumerate(self._cum_sum):
@@ -92,86 +81,34 @@ class Load_Dataset(Dataset):
         self.aug1, self.aug2 = [],[]
         for bat in self.x_data:
             temp_aug1, temp_aug2 = DataTransform(bat, config)
-            # import ipdb
-            # ipdb.set_trace()
             self.aug1.append(temp_aug1) # weak augmentation
             self.aug2.append(temp_aug2) # strong augmentation  
         
-        self.norm_aug1 = []
-        self.norm_aug2 = []
-        self.norm_x = []
-        for idx in range(len(self.aug1)):
-            normalized_results_aug1 = []
-            normalized_results_aug2 = []
-            normalized_results = []
-            for c in range(len(self.aug1[idx])):
-                normalized_cycle_aug1 = []
-                normalized_cycle_aug2 = []
-                normalized_cycle = []
-                for k in range(len(ks)):
-                    reshaped_data = self.x_data[idx][c][k][:].reshape(-1,1)
-                    reshaped_aug1 = self.aug1[idx][c][k][:].reshape(-1,1)
-                    reshaped_aug2 = self.aug2[idx][c][k][:].reshape(-1,1)
-                    
-                    normalized_value_aug1 = scaler.fit_transform(reshaped_aug1)
-                    normalized_value_aug2 = scaler.fit_transform(reshaped_aug2)
-                    normalized_value = scaler.fit_transform(reshaped_data)
-                    
-                    normalized_cycle_aug1.append(normalized_value_aug1.flatten())
-                    normalized_cycle_aug2.append(normalized_value_aug2.flatten())
-                    normalized_cycle.append(normalized_value.flatten())
-                    
-                normalized_results_aug1.append(normalized_cycle_aug1)
-                normalized_results_aug2.append(normalized_cycle_aug2)
-                normalized_results.append(normalized_cycle)
-            self.norm_aug1.append(np.asarray(normalized_results_aug1,dtype=np.float32))
-            self.norm_aug2.append(np.asarray(normalized_results_aug2,dtype=np.float32))
-            self.norm_x.append(np.asarray(normalized_results,dtype=np.float32))
         
-        for idx in range(len(self.norm_aug1)):
-            if isinstance(self.norm_aug1[idx], np.ndarray):
-                self.norm_aug1[idx] = torch.from_numpy(self.norm_aug1[idx])
-                self.norm_aug2[idx] = torch.from_numpy(self.norm_aug2[idx])
-                self.norm_x[idx] = torch.from_numpy(self.norm_x[idx])
+        #首先sequence prediction过程暂时不考虑augmentation
+        self.samples = []
+        self.samples_aug1 = []
+        self.samples_aug2 = []
+        self.samples_labels = []
+        window_size = 10
+        step = 1
+        for idx, bat in enumerate(self.x_data):
+            for start in range(0,len(bat)-window_size, step):
+                temp_sample = torch.stack([cyc for cyc in bat[start:start+window_size]])
+                temp_smaple_aug1 = torch.stack([cyc for cyc in self.aug1[idx][start:start+window_size]])
+                temp_smaple_aug2 = torch.stack([cyc for cyc in self.aug2[idx][start:start+window_size]])
+                temp_labels = self.y_data[idx][start:start+window_size]
+                self.samples.append(temp_sample)
+                self.samples_aug1.append(temp_smaple_aug1)
+                self.samples_aug2.append(temp_smaple_aug2)
+                self.samples_labels.append(temp_labels)
+        
+        self.samples_labels = torch.stack(self.samples_labels)
+        self.len = len(self.samples)
 
     def __getitem__(self, index):
         i, si = self.indexes[index]
-        return self.x_data[i][si], self.y_data[i][si], self.aug1[i][si], self.aug2[i][si]
+        return self.samples[index], self.samples_labels[index], self.samples_aug1[index], self.samples_aug2[index]
 
     def __len__(self):
         return self.len
-
-
-import random
-
-def custom_collate_fn(batch):
-    """
-    自定义 collate_fn，用于从电池数据中按滑动窗口选取 batch
-    :param batch: 包含多个电池的所有 cycle 数据
-    """
-    custom_batch_size = 32
-    step = 4  # 滑动步长
-    batch_x = []
-    batch_y = []
-
-    for x,y in batch:
-        num_cycles = len(x)
-        # 如果 cycle 数少于 128，则直接返回所有 cycle
-        if num_cycles <= custom_batch_size:
-            continue
-            # batch_x.append(x)
-            # batch_y.append(y)
-        else:
-            # 从最后一个 cycle 开始滑动选取 128 个 cycle
-            # print("original shape of x is: ", x.shape)
-            # print("original shape of y is: ", y.shape)
-            for start in range(0, num_cycles - custom_batch_size, step):
-                if start + custom_batch_size > num_cycles:
-                    continue
-                batch_x.append(x[start:start + custom_batch_size])
-                batch_y.append(y[start:start + custom_batch_size])
-
-    if len(batch_x) != 0:
-        batch_x = torch.stack(batch_x) if isinstance(batch_x[0], torch.Tensor) else batch_x
-        batch_y = torch.stack(batch_y) if isinstance(batch_x[0], torch.Tensor) else batch_y
-    return batch_x, batch_y
