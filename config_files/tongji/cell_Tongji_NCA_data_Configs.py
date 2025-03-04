@@ -54,7 +54,7 @@ class Config(object):
         # data parameters
         self.drop_last = True
         self.k_fold = 5
-        self.batch_size = 128
+        self.batch_size = 32
 
         self.Context_Cont = Context_Cont_configs()
         self.TC = TC()
@@ -70,8 +70,8 @@ class augmentations(object):
         self.jitter_scale_ratio_strong = 1.2
         self.jitter_ratio = 2
 
-        self.jitter_ratio_weak = 0.5
-        self.jitter_ratio_strong = 1
+        self.jitter_ratio_weak = 0.3
+        self.jitter_ratio_strong = 0.6
         self.max_seg = 4
         # self.max_seg = 12
 

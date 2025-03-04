@@ -1,5 +1,8 @@
 data/
-.idea/
 __pycache__/
+.idea/
 .git/
-.rsyncignore
+.rsyncignore/
+.ipynb_checkpoints/
+experiments_logs/
+.ipynb_checkpoints/
