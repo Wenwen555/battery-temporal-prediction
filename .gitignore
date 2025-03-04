@@ -1,0 +1,7 @@
+data/
+__pycache__/
+.idea/
+.git/
+.rsyncignore/
+.ipynb_checkpoints/
+experiments_logs/
