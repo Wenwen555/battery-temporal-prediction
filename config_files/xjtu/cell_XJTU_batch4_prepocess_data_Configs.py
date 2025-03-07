@@ -1,14 +1,30 @@
 class Config(object):
     def __init__(self):
-        # model configs
-        self.input_channels = 4
+
+        # cnn model configs
+        self.cnn_input_channels_1 = 4
+        self.cnn_output_channels_1 = 64
+
+        self.cnn_input_channels_2 = 64
+        self.cnn_output_channels_2 = 128
+
+        self.cnn_input_channels_3 = 128
+        self.cnn_output_channels_3 = 256
+        
+        # mlp model configs
+        self.mlp_input_channels = 3
+        self.original_seq_len = 537
+        self.hidden_channels = 128
+        self.mlp_dropout = 0.2
+        self.mlp_final_output = 256
+
+
+        # channels for TC module.
         self.final_out_channels = 256
         self.num_classes = 1  # which means prediction or regression.
         self.dropout = 0.35
-
-        self.kernel_size = 25
-        self.stride = 3
         self.features_len = 63
+        
         # training configs
         self.num_epoch = 150
 
@@ -20,26 +36,20 @@ class Config(object):
 
         # data parameters
         self.drop_last = True
-        self.batch_size = 128
+        self.k_fold = 5
+        self.batch_size = 64
 
         self.Context_Cont = Context_Cont_configs()
         self.TC = TC()
         self.augmentation = augmentations()
-        self.window_len = 5  # 可以尝试修改此值
 
 
 
 class augmentations(object):
     def __init__(self):
-        self.jitter_scale_ratio = 1.5
-        self.jitter_scale_ratio_weak = 0.8
-        self.jitter_scale_ratio_strong = 1.2
-        self.jitter_ratio = 2
 
-        self.jitter_ratio_weak = 0.8
-        self.jitter_ratio_strong = 1.4
-        self.max_seg = 4
-        # self.max_seg = 12
+        self.jitter_ratio_weak = 0.4
+        self.jitter_ratio_strong = 0.8
 
 
 
@@ -52,4 +62,4 @@ class Context_Cont_configs(object):
 class TC(object):
     def __init__(self):
         self.hidden_dim = 64
-        self.timesteps = 270
+        self.timesteps = 8
