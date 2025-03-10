@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 import torch
 from torch.utils.data import Dataset
 
-from .augmentations import DataTransform
+
 
 
 # 数据加载过程如下:
@@ -76,13 +76,6 @@ class Load_Dataset(Dataset):
             if isinstance(self.x_data[idx], np.ndarray):
                 self.x_data[idx] = torch.from_numpy(self.x_data[idx])
                 self.y_data[idx] = torch.from_numpy(self.y_data[idx])
-                     
-        #先对数据增强，再做归一化
-        self.aug1, self.aug2 = [],[]
-        for bat in self.x_data:
-            temp_aug1, temp_aug2 = DataTransform(bat, config)
-            self.aug1.append(temp_aug1) # weak augmentation
-            self.aug2.append(temp_aug2) # strong augmentation  
         
         
         #首先sequence prediction过程暂时不考虑augmentation
@@ -94,37 +87,14 @@ class Load_Dataset(Dataset):
             for start in range(0,len(bat)-window_size, step):
                 temp_sample = torch.stack([cyc for cyc in bat[start:start+window_size]])
                 temp_labels = self.y_data[idx][start:start+window_size]
-                # temp_smaple_aug1 = torch.stack([cyc for cyc in self.aug1[idx][start:start+window_size]])
-                # temp_smaple_aug2 = torch.stack([cyc for cyc in self.aug2[idx][start:start+window_size]])
                 self.samples.append(temp_sample)
                 self.samples_labels.append(temp_labels)
-                # self.samples_aug1.append(temp_smaple_aug1)
-                # self.samples_aug2.append(temp_smaple_aug2)
-                
-                
-        self.samples_labels = torch.stack(self.samples_labels)
-        del self.x_data, self.y_data
-        
-        self.samples_aug1 = []
-        for idx, bat in enumerate(self.aug1):
-            for start in range(0,len(bat)-window_size, step):
-                temp_smaple_aug1 = torch.stack([cyc for cyc in bat[start:start+window_size]])
-                self.samples_aug1.append(temp_smaple_aug1)
-        del self.aug1
-        
-        self.samples_aug2 = []
-        for idx, bat in enumerate(self.aug2):
-            for start in range(0,len(bat)-window_size, step):
-                temp_smaple_aug2 = torch.stack([cyc for cyc in bat[start:start+window_size]])
-                self.samples_aug2.append(temp_smaple_aug2)
-                
-        del self.aug2        
         
         self.len = len(self.samples)
 
     def __getitem__(self, index):
         i, si = self.indexes[index]
-        return self.samples[index], self.samples_labels[index], self.samples_aug1[index], self.samples_aug2[index]
+        return self.samples[index], self.samples_labels[index]
 
     def __len__(self):
         return self.len

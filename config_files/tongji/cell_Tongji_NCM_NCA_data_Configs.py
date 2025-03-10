@@ -13,7 +13,7 @@ class Config(object):
         
         # mlp model configs
         self.mlp_input_channels = 3
-        self.original_seq_len = 537
+        self.original_seq_len = 1101
         self.hidden_channels = 128
         self.mlp_dropout = 0.2
         self.mlp_final_output = 256

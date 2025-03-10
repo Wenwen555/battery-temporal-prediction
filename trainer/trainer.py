@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 import random
 import torch.nn.functional as F
 from models.loss import NTXentLoss
+from dataloader.augmentations import DataTransform
+
 
 # 定义一个MAPE loss
 class MAPELoss(nn.Module):
@@ -71,24 +73,21 @@ def model_train(model,  temporal_contr_model, model_optimizer, temp_cont_optimiz
     criterion_2 = MAPELoss()
     lsoftmax = nn.LogSoftmax(dim=-1)
 
-    for batch_idx, (data, labels, aug1, aug2) in enumerate(train_loader):
+    for batch_idx, (data, labels) in enumerate(train_loader):
 
         cycle_data =data.float().to(device)
         cycle_labels = labels.float().to(device)
-        aug1 = aug1.float().to(device)
-        aug2 = aug2.float().to(device)
-
         # optimizer
         model_optimizer.zero_grad()
         temp_cont_optimizer.zero_grad()
 
         if training_mode == "supervised_with_contrast":
             predictions, features = model(cycle_data)
-            predictions1, features1 = model(aug1)
-            predictions2, features2 = model(aug2)
             
-            temp_cont_loss1, temp_cont_feat1 = temporal_contr_model(features1, features)
-            temp_cont_loss2, temp_cont_feat2 = temporal_contr_model(features2, features)
+            aug1, aug2 = DataTransform(features, config)
+            
+            temp_cont_loss1, _ = temporal_contr_model(aug1, features)
+            temp_cont_loss2, _ = temporal_contr_model(aug2, features)
             
             cont_loss = temp_cont_loss1 + temp_cont_loss2
             
@@ -131,7 +130,7 @@ def model_evaluate(model, temporal_contr_model ,test_dl, device):
     criterion_2 = nn.MSELoss()
 
     with torch.no_grad():
-        for data, labels, aug1, aug2 in test_dl:
+        for data, labels in test_dl:
             cycle_data,cycle_labels = data.float().to(device), labels.float().to(device)
             output = model(cycle_data)
             predictions,_ = output
