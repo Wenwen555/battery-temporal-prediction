@@ -2,7 +2,7 @@ class Config(object):
     def __init__(self):
 
         # cnn model configs
-        self.cnn_input_channels_1 = 4
+        self.cnn_input_channels_1 = 3
         self.cnn_output_channels_1 = 64
 
         self.cnn_input_channels_2 = 64
@@ -12,7 +12,7 @@ class Config(object):
         self.cnn_output_channels_3 = 256
         
         # mlp model configs
-        self.mlp_input_channels = 3
+        self.mlp_input_channels = 4
         self.original_seq_len = 537
         self.hidden_channels = 128
         self.mlp_dropout = 0.2

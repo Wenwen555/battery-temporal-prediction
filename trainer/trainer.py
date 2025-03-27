@@ -65,12 +65,13 @@ def model_train(model,  temporal_contr_model, model_optimizer, temp_cont_optimiz
                 device, training_mode):
     model.train()
     temporal_contr_model.train()
-
+    
     total_loss_mse = []
     total_loss_mape = []
     total_loss_rmse = []
     criterion_1 = nn.MSELoss()
     criterion_2 = MAPELoss()
+    
     lsoftmax = nn.LogSoftmax(dim=-1)
 
     for batch_idx, (data, labels) in enumerate(train_loader):
@@ -89,18 +90,24 @@ def model_train(model,  temporal_contr_model, model_optimizer, temp_cont_optimiz
             temp_cont_loss1, _ = temporal_contr_model(aug1, features)
             temp_cont_loss2, _ = temporal_contr_model(aug2, features)
             
+            # distribute_loss = 0
+            # for i in np.arange(0, features.shape[0]):
+            #     total_1 = torch.mm(aug1[i], torch.transpose(features[i], 0, 1))
+            #     total_2 = torch.mm(aug2[i], torch.transpose(features[i], 0, 1))
+            #     distribute_loss += torch.sum(torch.diag(lsoftmax(total_1))) + torch.sum(torch.diag(lsoftmax(total_2)))
+            # distribute_loss = distribute_loss / features.shape[0]
+            
             cont_loss = temp_cont_loss1 + temp_cont_loss2
             
             loss_mse_supervised = criterion_1(predictions, cycle_labels)
             loss_mape_supervised = criterion_2(predictions, cycle_labels)
             loss_rmse_supervised = torch.sqrt(loss_mse_supervised)
             
-            loss_rmse = loss_rmse_supervised/loss_rmse_supervised.detach() + 0.6 * cont_loss/cont_loss.detach()
+            loss_rmse = loss_rmse_supervised/loss_rmse_supervised.detach() + 0.5 * cont_loss/cont_loss.detach()
             loss_mape = loss_mape_supervised
             
         else:
-            output = model(cycle_data)
-            predictions, _ = output
+            predictions, features = model(cycle_data)
             loss_mse = criterion_1(predictions, cycle_labels)
             loss_rmse = torch.sqrt(loss_mse)
             loss_mape = criterion_2(predictions, cycle_labels)
@@ -132,14 +139,13 @@ def model_evaluate(model, temporal_contr_model ,test_dl, device):
     with torch.no_grad():
         for data, labels in test_dl:
             cycle_data,cycle_labels = data.float().to(device), labels.float().to(device)
-            output = model(cycle_data)
-            predictions,_ = output
+            predictions, _ = model(cycle_data)
+            # predictions, _ = temporal_contr_model(features)
             loss_mape = criterion_1(predictions, cycle_labels)
             loss_mse = criterion_2(predictions, cycle_labels)
             loss_rmse = torch.sqrt(loss_mse)
             total_loss_mape.append(loss_mape.item())
             total_loss_rmse.append(loss_rmse.item())
-
         total_loss_mape = torch.tensor(total_loss_mape).mean()  # average loss
         total_loss_rmse = torch.tensor(total_loss_rmse).mean()
     return total_loss_mape, total_loss_rmse

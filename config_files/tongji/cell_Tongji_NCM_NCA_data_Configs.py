@@ -1,6 +1,15 @@
 class Config(object):
     def __init__(self):
+        #  transformer
+        self.input_features = 4
+        self.seq_len = 1101
+        self.output_features = 64
+        self.d_model = 128
 
+        # lstm model configs
+        self.input_size = 256
+        self.hidden_size = 128
+        
         # cnn model configs
         self.cnn_input_channels_1 = 3
         self.cnn_output_channels_1 = 64
@@ -10,9 +19,10 @@ class Config(object):
 
         self.cnn_input_channels_3 = 128
         self.cnn_output_channels_3 = 256
+        self.output_seqlen = 16
         
         # mlp model configs
-        self.mlp_input_channels = 3
+        self.mlp_input_channels = 2
         self.original_seq_len = 1101
         self.hidden_channels = 128
         self.mlp_dropout = 0.2

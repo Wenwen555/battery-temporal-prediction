@@ -27,7 +27,7 @@ parser.add_argument('--dataset', default='mit', type=str, help='Experiment Datas
 parser.add_argument('--experiment_description', default='', type=str, help='Experiment Description')
 parser.add_argument('--selected_subset', default='cell_mit_batch1',help='subset of a dataset')
 parser.add_argument('--run_description', default='test1', type=str, help='Experiment Description')
-parser.add_argument('--base_model',default='resnet34',type=str, help='cnn, resnet, mlp')
+parser.add_argument('--base_model',default='cnn',type=str, help='cnn, lstm, mlp, imv_lstm, transformer')
 parser.add_argument('--seed', default=123, type=int, help='seed value')
 parser.add_argument('--training_mode', default='supervised_with_contrast', type=str,
                     help='Modes of choice: supervised, supervised_with_contrast, predict_module')
@@ -63,8 +63,7 @@ np.random.seed(SEED)
 
 
 # Load Model
-model = base_Model(configs).to(device)
-temporal_contr_model = TC(configs, device).to(device)
+temporal_contr_model = TC(configs,device).to(device)
 
 # Load datasets
 data_path = os.path.join(args.data_path, data_type)
@@ -126,6 +125,7 @@ if training_mode == "fine_tuned":
 
 # 使用k-fold交叉验证来训练!
 for fold, (train_idx, valid_idx) in enumerate(kf.split(indices)):
+    model = base_Model(configs).to(device)
     print(f'Fold {fold + 1}/{k_folds}')
     #
     experiment_log_dir = os.path.join(logs_save_dir, experiment_description, run_description,
@@ -133,7 +133,8 @@ for fold, (train_idx, valid_idx) in enumerate(kf.split(indices)):
     os.makedirs(experiment_log_dir, exist_ok=True)
 
     # Logging
-    log_file_name = os.path.join(experiment_log_dir, f"logs_{datetime.now().strftime('%d_%m_%Y_%H_%M_%S')}.log")
+    log_file_name = os.path.join(experiment_log_dir,
+                                 f"logs_{datetime.now().strftime('%d_%m_%Y_%H_%M_%S')}.log")
     logger = _logger(log_file_name)
     logger.debug("=" * 45)
     logger.debug(f'Dataset: {data_type}')
@@ -158,8 +159,7 @@ for fold, (train_idx, valid_idx) in enumerate(kf.split(indices)):
         temporal_contr_optimizer = torch.optim.Adam(list(model.parameters()), lr=configs.lr,
                                                     betas=(configs.beta1, configs.beta2), weight_decay=3e-4)
         # Trainer
-        Trainer_f(model, temporal_contr_model, model_optimizer, temporal_contr_optimizer, train_loader, valid_loader
-                , test_loader, device, logger, configs, experiment_log_dir, training_mode)
+        Trainer_f(model, temporal_contr_model, model_optimizer, temporal_contr_optimizer, train_loader, valid_loader, test_loader, device, logger, configs, experiment_log_dir, training_mode)
     else:
         # 使用 Subset 创建训练集和验证集
         model_optimizer = torch.optim.Adam(list(model.parameters()), lr=configs.lr,
@@ -168,8 +168,7 @@ for fold, (train_idx, valid_idx) in enumerate(kf.split(indices)):
         temporal_contr_optimizer = torch.optim.Adam(list(temporal_contr_model.parameters()), lr=configs.lr,
                                                     betas=(configs.beta1, configs.beta2), weight_decay=3e-4)
 
-        Trainer(model,temporal_contr_model,model_optimizer, temporal_contr_optimizer, train_loader, valid_loader
-                , test_loader, device, logger, configs, experiment_log_dir, training_mode)
+        Trainer(model,temporal_contr_model,model_optimizer, temporal_contr_optimizer, train_loader, valid_loader, test_loader, device, logger, configs, experiment_log_dir, training_mode)
     print("Finish one training!")
 logger.debug(f"Training time is : {datetime.now() - start_time}")
 
