@@ -19,8 +19,13 @@ class Load_Dataset():
         # for hust dataset, we usually take 4,8 as test sample.
         test_bat_idx = []
         for bat_name in data.keys():
+            #  and len(test_bat_idx) < 0.2 * len(data.keys())
             if bat_name % 4 == 0:
                 test_bat_idx.append(bat_name)
+                
+        print("Length of bat_idx is: " ,len(data.keys()))
+        print("Length of test_bat_idx is: " ,len(test_bat_idx))
+        
         # test_bat_idx = [4,9,14,19,24,29,34,39,44]
         # test_bat_idx = ['R2.5_battery-4','R2.5_battery-8']
         # It is easy to check the length of data and make desicion.
@@ -48,8 +53,8 @@ class Load_Dataset():
 
 current_path = os.getcwd()
 parent_path = os.path.dirname(current_path)
-save_path = os.path.join(parent_path, 'data/Tongji/cell_Tongji_NCM_NCA_data')
-filepath = os.path.join(parent_path, 'data/Tongji/Tongji_NCM_NCA_prepocess.pkl')
+save_path = os.path.join(parent_path, 'data/HUST/cell_HUST_batch10_data')
+filepath = os.path.join(parent_path, 'data/HUST/HUST_batch10_prepocess.pkl')
 
 ld = Load_Dataset(save_path)
 dataset = ld.read_pkl_file(filepath)

@@ -1,9 +1,11 @@
-export CUDA_VISIBLE_DEVICES=1
-python -m main.py \
---dataset tongji \
---experiment_description NCM_NCA_test \
---selected_subset cell_Tongji_NCM_NCA_data \
---run_description test \
---base_model mlp \
---training_mode supervised \
---data_path data/Tongji/ \
+export CUDA_VISIBLE_DEVICES=0
+for training_mode in {'supervised','supervised_with_contrast'}; do
+    python -m main.py \
+    --dataset hust \
+    --experiment_description hust \
+    --selected_subset cell_HUST_batch9_data \
+    --run_description cnn_hust_batch2 \
+    --base_model cnn \
+    --training_mode $training_mode \
+    --data_path data/HUST/
+done

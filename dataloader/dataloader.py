@@ -25,6 +25,7 @@ class Load_Dataset(Dataset):
         records = []
 
         if dataset_name == "tongji":
+            # "accumulated Q"
             ks = ['Ecell/V', '<I>/mA', 'Q charge/mA.h']
         elif dataset_name == "xjtu":
             ks = ['current_A', 'voltage_V', 'capacity_Ah', 'temperature_C']
