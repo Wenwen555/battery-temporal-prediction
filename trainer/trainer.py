@@ -21,7 +21,39 @@ class MAPELoss(nn.Module):
     def forward(self, y_pred, y_true):
         loss = torch.mean(torch.abs((y_true - y_pred) / y_true)) * 100
         return loss
+    
+def Trainer_S(model, temporal_contr_model, model_optimizer, temp_cont_optimizer, train_dl, test_dl, device,
+            logger, config, experiment_log_dir, training_mode):
+    # Start training
+    logger.debug("Small sample training started ....")
 
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(model_optimizer, 'min')
+
+
+    for epoch in range(1, config.num_epoch + 1):
+        # Train loss
+        train_rmse_loss, train_mape_loss = model_train(model, temporal_contr_model, model_optimizer, temp_cont_optimizer,
+                                             train_dl, config, device, training_mode)
+        scheduler.step(train_rmse_loss)
+
+        logger.debug(f'\nEpoch : {epoch}\n'
+                     f'Train RMSE Loss     : {train_rmse_loss:2.8f}\t | \tTrain MAPE Loss     : {train_mape_loss:2.8f}\n'
+                     f'lr                  : {scheduler.get_last_lr()}\n'
+        )
+        
+    # save the model after training ...
+    os.makedirs(os.path.join(experiment_log_dir, "saved_models"), exist_ok=True)
+    chkpoint = {'model_state_dict': model.state_dict(),
+                'temporal_contr_model_state_dict': temporal_contr_model.state_dict()}
+    torch.save(chkpoint, os.path.join(experiment_log_dir, "saved_models", f'ckp_last.pt'))
+
+    # evaluate on the test set
+    logger.debug('\nEvaluate on the Test set:')
+    test_mape, test_rmse = model_evaluate(model, temporal_contr_model, test_dl, device)
+    logger.debug(f'Test MAPE loss      :{test_mape:2.8f}\t | Test RMSE loss      : {test_rmse:2.8f}')
+
+    logger.debug("\n################## Training is Done! #########################")
+    
 
 def Trainer(model, temporal_contr_model, model_optimizer, temp_cont_optimizer, train_dl, valid_dl, test_dl, device,
             logger, config, experiment_log_dir, training_mode):
