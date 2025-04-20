@@ -2,7 +2,7 @@ import pickle
 import os
 import torch
 import matplotlib.pyplot as plt
-
+from itertools import combinations
 
 def get_save_and_file_path(target_dataset):
     n_value_dict = {
@@ -76,6 +76,7 @@ class Load_Dataset():
     def small_sample(data, sample_num):
         cnt = 0
         test_bat = ['2C_battery-4','2C_battery-8']
+        # In order to avoid some data unexceptedly improve the performance of model, we implemented random selection.
         # test_bat = [4,8]
         train_set = []
         for bat_name in data.keys():
@@ -83,6 +84,28 @@ class Load_Dataset():
                 train_set.append(data[bat_name])
                 cnt += 1
         return train_set
+    
+    @staticmethod
+    def small_sample_random_select(data, sample_num, save_path):
+        # for xjtu
+        batteries = [f"2C_battery-{i}" for i in range(1, 9) if i not in {4, 8}]
+        all_combinations = list(combinations(batteries, sample_num))
+        number2text = ['one','two','three','four']
+        for combo in all_combinations:
+            train_set = []
+            # 提取数字部分，如 "2C_battery-1" -> "1"
+            num1 = combo[0].split("-")[1]  # "1"
+            num2 = combo[1].split("-")[1]  # "2"
+            # 组合成文件
+            filename = f"{number2text[sample_num-1]}_bat_{num1}{num2}.pt"
+            train_file_path = os.path.join(save_path, filename)
+            # 存入数据
+            for bat_name in data.keys():
+                if bat_name in combo:
+                    train_set.append(data[bat_name])
+            # save the file
+            torch.save(train_set, train_file_path, _use_new_zipfile_serialization=False)
+            print(f"Saved: {filename} -> {combo}")
     
     def save_dict(self, train_dict, test_dict=None, sample_num=None):
         save_path = self.save_path
@@ -108,6 +131,7 @@ parent_path = os.path.dirname(current_path)
 target_dataset = 'xjtu'
 target_subset = 'batch1'
 samll_sample_flag = True
+random_select = True
 batch_dict, file_dict = get_save_and_file_path(target_dataset)
 
 save_path = os.path.join(parent_path, batch_dict[target_subset])
@@ -117,9 +141,16 @@ ld = Load_Dataset(save_path)
 dataset = ld.read_pkl_file(filepath)
 if samll_sample_flag:
     # This is data selection for small sample experiment
-    for sample in [1,2,3,4]:
-        train_dataset = ld.small_sample(dataset, sample)
-        ld.save_dict(train_dict=train_dataset, sample_num=sample)
+    # for sample in [1,2,3,4]:
+    for sample in [2]:
+        if random_select:
+            random_select_save_path = os.path.join(save_path, f"random_select_{sample}_bat")
+            # 确保目标文件夹存在，如果不存在则创建
+            os.makedirs(random_select_save_path, exist_ok=True)
+            ld.small_sample_random_select(dataset, sample, random_select_save_path)
+        else:
+            train_dataset = ld.small_sample(dataset, sample)
+            ld.save_dict(train_dict=train_dataset, sample_num=sample)
 else:
     train_val_bat, test_bat = ld.train_val_test_split(dataset)
     

@@ -7,6 +7,7 @@ training_mode="supervised_with_contrast"
 base_model="cnn"
 target_batch="1"          # Set to empty for all batches, or specify a batch number (e.g., 3)
 use_small_sample=true    # Set to false to disable small sampling
+random_select=true     # Set to false to disable random selection
 
 # Batch number configuration
 declare -A n_value_dict=(
@@ -46,7 +47,8 @@ get_batch_range() {
 # Function to get sample numbers based on use_small_sample
 get_sample_numbers() {
     if [[ "$use_small_sample" == true ]]; then
-        echo "1 2 3 4"
+        # echo "1 2 3 4"
+        echo "2"
     else
         echo "0"  # Using 0 as a flag for no small sampling
     fi
@@ -69,17 +71,23 @@ for small_sample_num in $(get_sample_numbers); do
                 selected_subset="cell_Tongji_${tongji_subsets[i-1]}_data"  # Arrays are 0-indexed
                 ;;
         esac
-
-        echo "Processing: dataset=$dataset, batch=$i, sample_num=$small_sample_num"
+        
+        # Set output directory based on random_select
+        if [[ "$random_select" == true ]]; then
+            run_description="${base_model}_batch${i}_random_select_${small_sample_num}_bat"
+        else
+            run_description="${base_model}_${dataset}_batch${i}_${small_sample_num}bat"
+        fi
         
         python -m main.py \
             --dataset $dataset \
             --experiment_description $dataset \
-            --selected_subset "$selected_subset" \
-            --run_description "${base_model}_${dataset}_batch${i}_${small_sample_num}bat" \
+            --selected_subset $selected_subset \
+            --run_description $run_description \
             --base_model $base_model \
             --training_mode $training_mode \
-            --data_path "${data_paths[$dataset]}" \
-            --small_sample_num $small_sample_num
+            --data_path ${data_paths[$dataset]} \
+            --small_sample_num $small_sample_num \
+            --random_select $random_select
     done
 done

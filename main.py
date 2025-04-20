@@ -31,6 +31,7 @@ parser.add_argument('--seed', default=123, type=int, help='seed value')
 parser.add_argument('--training_mode', default='supervised_with_contrast', type=str,
                     help='Modes of choice: supervised, supervised_with_contrast, predict_module')
 parser.add_argument('--small_sample_num', default=None, type=int, help='The number of small sample in experiment')
+parser.add_argument('--random_select', default=home_dir, type=str, help='Project home directory')
 parser.add_argument('--data_path', default=r'data/', type=str, help='Path containing dataset')
 parser.add_argument('--logs_save_dir', default='experiments_logs', type=str, help='saving directory')
 parser.add_argument('--device', default='cuda:0', type=str, help='cpu or cuda')
@@ -46,6 +47,7 @@ training_mode = args.training_mode
 small_sample_num = args.small_sample_num
 run_description = args.run_description
 base_model = args.base_model
+random_select = args.random_select
 
 logs_save_dir = args.logs_save_dir
 os.makedirs(logs_save_dir, exist_ok=True)
@@ -73,7 +75,7 @@ batch_size = configs.batch_size
 if training_mode == "fine_tuned":
     dataset = torch.load(os.path.join(data_path, 'one_bat.pt'),weights_only=False)
 else:
-    if small_sample_num != None:
+    if small_sample_num != None and random_select == None:
         dataset_name = ['one_bat.pt','two_bat.pt','three_bat.pt','four_bat.pt']
         dataset = torch.load(os.path.join(data_path, dataset_name[small_sample_num-1]),weights_only=False)
     else:
@@ -152,28 +154,59 @@ if training_mode == "fine_tuned":
     
 else:
     if small_sample_num != None:
-        model = base_Model(configs).to(device)
-        experiment_log_dir = os.path.join(logs_save_dir, experiment_description, run_description,
-                                              training_mode + f"_seed_{SEED}")
-        os.makedirs(experiment_log_dir, exist_ok=True)
+        if random_select:
+            random_selection_folder_path = os.path.join(data_path,f"random_select_{small_sample_num}_bat")
+            pt_files = [f for f in os.listdir(random_selection_folder_path) if f.endswith(".pt")]
+            for file in pt_files:
+                dataset = torch.load(os.path.join(random_selection_folder_path, file),weights_only=False)
+                model = base_Model(configs).to(device)
+                file_save = file.split(".")[0]
+                experiment_log_dir = os.path.join(logs_save_dir, experiment_description, run_description, file_save,
+                                                      training_mode + f"_seed_{SEED}")
+                os.makedirs(experiment_log_dir, exist_ok=True)
 
-        # Logging
-        log_file_name = os.path.join(experiment_log_dir,
-                                     f"logs_{datetime.now().strftime('%d_%m_%Y_%H_%M_%S')}.log")
-        logger = _logger(log_file_name)
-        logger.debug("=" * 45)
-        logger.debug(f'Dataset: {data_type}')
-        logger.debug(f'Mode:    {training_mode}')
-        logger.debug(f'Sample Nums: {small_sample_num}')
-        logger.debug("=" * 45)
-        
-        train_dataset = Load_Dataset(dataset, configs, training_mode, dataname)
-        train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=16, drop_last=True, shuffle=True, num_workers=0)
-        
-        model_optimizer = torch.optim.Adam(list(model.parameters()), lr=configs.lr, betas=(configs.beta1, configs.beta2), weight_decay=3e-4)
-        temporal_contr_optimizer = torch.optim.Adam(list(temporal_contr_model.parameters()), lr=configs.lr, betas=(configs.beta1, configs.beta2), weight_decay=3e-4)
-        # Trainer S
-        Trainer_S(model, temporal_contr_model, model_optimizer,temporal_contr_optimizer, train_loader, test_loader, device, logger, configs, experiment_log_dir, training_mode)
+                # Logging
+                log_file_name = os.path.join(experiment_log_dir,
+                                             f"logs_{datetime.now().strftime('%d_%m_%Y_%H_%M_%S')}.log")
+                logger = _logger(log_file_name)
+                logger.debug("=" * 45)
+                logger.debug(f'Random selection training')
+                logger.debug("=" * 45)
+                logger.debug(f'Dataset: {data_type}')
+                logger.debug(f'Mode:    {training_mode}')
+                logger.debug(f'Sample Nums: {small_sample_num}')
+                logger.debug("=" * 45)
+
+                train_dataset = Load_Dataset(dataset, configs, training_mode, dataname)
+                train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=16, drop_last=True, shuffle=True, num_workers=0)
+
+                model_optimizer = torch.optim.Adam(list(model.parameters()), lr=configs.lr, betas=(configs.beta1, configs.beta2), weight_decay=3e-4)
+                temporal_contr_optimizer = torch.optim.Adam(list(temporal_contr_model.parameters()), lr=configs.lr, betas=(configs.beta1, configs.beta2), weight_decay=3e-4)
+                # Trainer S
+                Trainer_S(model, temporal_contr_model, model_optimizer,temporal_contr_optimizer, train_loader, test_loader, device, logger, configs, experiment_log_dir, training_mode)
+        else:
+            model = base_Model(configs).to(device)
+            experiment_log_dir = os.path.join(logs_save_dir, experiment_description, run_description,
+                                                  training_mode + f"_seed_{SEED}")
+            os.makedirs(experiment_log_dir, exist_ok=True)
+
+            # Logging
+            log_file_name = os.path.join(experiment_log_dir,
+                                         f"logs_{datetime.now().strftime('%d_%m_%Y_%H_%M_%S')}.log")
+            logger = _logger(log_file_name)
+            logger.debug("=" * 45)
+            logger.debug(f'Dataset: {data_type}')
+            logger.debug(f'Mode:    {training_mode}')
+            logger.debug(f'Sample Nums: {small_sample_num}')
+            logger.debug("=" * 45)
+
+            train_dataset = Load_Dataset(dataset, configs, training_mode, dataname)
+            train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=16, drop_last=True, shuffle=True, num_workers=0)
+
+            model_optimizer = torch.optim.Adam(list(model.parameters()), lr=configs.lr, betas=(configs.beta1, configs.beta2), weight_decay=3e-4)
+            temporal_contr_optimizer = torch.optim.Adam(list(temporal_contr_model.parameters()), lr=configs.lr, betas=(configs.beta1, configs.beta2), weight_decay=3e-4)
+            # Trainer S
+            Trainer_S(model, temporal_contr_model, model_optimizer,temporal_contr_optimizer, train_loader, test_loader, device, logger, configs, experiment_log_dir, training_mode)
     else:
         k_folds = configs.k_fold
         kf = KFold(n_splits=k_folds, shuffle=True)
