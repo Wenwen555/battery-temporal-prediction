@@ -2,7 +2,7 @@ class Config(object):
     def __init__(self):
         #  transformer
         self.input_features = 4
-        self.seq_len = 537
+        self.seq_len = 1101
         self.output_features = 64
         self.d_model = 128
 
@@ -11,6 +11,7 @@ class Config(object):
         self.hidden_size = 128
         
         # cnn model configs
+        self.kernel_size = 20
         self.cnn_input_channels_1 = 3
         self.cnn_output_channels_1 = 64
 
@@ -22,8 +23,8 @@ class Config(object):
         self.output_seqlen = 16
         
         # mlp model configs
-        self.mlp_input_channels = 2
-        self.original_seq_len = 1101
+        self.mlp_input_channels = 3
+        self.original_seq_len = 500
         self.hidden_channels = 128
         self.mlp_dropout = 0.2
         self.mlp_final_output = 256
@@ -43,8 +44,10 @@ class Config(object):
         self.beta1 = 0.9
         self.beta2 = 0.99
         self.lr = 3e-4
+        self.lr_f=3e-4
 
         # data parameters
+        self.batch_size = 64
         self.drop_last = True
         self.k_fold = 5
         self.batch_size = 64
@@ -72,4 +75,4 @@ class Context_Cont_configs(object):
 class TC(object):
     def __init__(self):
         self.hidden_dim = 64
-        self.timesteps = 6
+        self.timesteps = 8

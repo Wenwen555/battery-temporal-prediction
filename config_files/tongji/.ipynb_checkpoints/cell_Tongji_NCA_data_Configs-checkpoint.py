@@ -43,6 +43,7 @@ class Config(object):
         self.beta1 = 0.9
         self.beta2 = 0.99
         self.lr = 3e-4
+        self.lr_f = 3e-4
 
         # data parameters
         self.drop_last = True
@@ -72,4 +73,4 @@ class Context_Cont_configs(object):
 class TC(object):
     def __init__(self):
         self.hidden_dim = 64
-        self.timesteps = 6
+        self.timesteps = 8

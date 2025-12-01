@@ -107,7 +107,6 @@ def model_train(model,  temporal_contr_model, model_optimizer, temp_cont_optimiz
     lsoftmax = nn.LogSoftmax(dim=-1)
 
     for batch_idx, (data, labels) in enumerate(train_loader):
-
         cycle_data =data.float().to(device)
         cycle_labels = labels.float().to(device)
         # optimizer
@@ -116,7 +115,6 @@ def model_train(model,  temporal_contr_model, model_optimizer, temp_cont_optimiz
 
         if training_mode == "supervised_with_contrast":
             predictions, features = model(cycle_data)
-            
             aug1, aug2 = DataTransform(features, config)
             
             temp_cont_loss1, _ = temporal_contr_model(aug1, features)
@@ -128,16 +126,14 @@ def model_train(model,  temporal_contr_model, model_optimizer, temp_cont_optimiz
             #     total_2 = torch.mm(aug2[i], torch.transpose(features[i], 0, 1))
             #     distribute_loss += torch.sum(torch.diag(lsoftmax(total_1))) + torch.sum(torch.diag(lsoftmax(total_2)))
             # distribute_loss = distribute_loss / features.shape[0]
-            
             cont_loss = temp_cont_loss1 + temp_cont_loss2
             
             loss_mse_supervised = criterion_1(predictions, cycle_labels)
             loss_mape_supervised = criterion_2(predictions, cycle_labels)
             loss_rmse_supervised = torch.sqrt(loss_mse_supervised)
             
-            loss_rmse = loss_rmse_supervised/loss_rmse_supervised.detach() + 0.5 * cont_loss/cont_loss.detach()
+            loss_rmse = loss_rmse_supervised/loss_rmse_supervised.detach() + 0.6 * cont_loss/cont_loss.detach()
             loss_mape = loss_mape_supervised
-            
         else:
             predictions, features = model(cycle_data)
             loss_mse = criterion_1(predictions, cycle_labels)

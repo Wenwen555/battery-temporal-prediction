@@ -1,8 +1,12 @@
 class Config(object):
     def __init__(self):
-
+        
+        # predictor model configs
+        self.output_module = 'predictor_mlp'  # 'linear' or 'predictor_mlp'
+        
         # cnn model configs
-        self.cnn_input_channels_1 = 4
+        self.kernel_size = 20
+        self.cnn_input_channels_1 = 3
         self.cnn_output_channels_1 = 64
 
         self.cnn_input_channels_2 = 64
@@ -13,7 +17,7 @@ class Config(object):
         
         # mlp model configs
         self.mlp_input_channels = 3
-        self.original_seq_len = 537
+        self.original_seq_len = 500
         self.hidden_channels = 128
         self.mlp_dropout = 0.2
         self.mlp_final_output = 256
@@ -33,6 +37,7 @@ class Config(object):
         self.beta1 = 0.9
         self.beta2 = 0.99
         self.lr = 3e-4
+        self.lr_f = 3e-4
 
         # data parameters
         self.drop_last = True

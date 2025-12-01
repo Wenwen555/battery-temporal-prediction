@@ -1,7 +1,12 @@
 class Config(object):
     def __init__(self):
-
+        
+        # lstm model configs
+        self.input_size = 3
+        self.hidden_size = 128
+        
         # cnn model configs
+        self.kernel_size = 20
         self.cnn_input_channels_1 = 3
         self.cnn_output_channels_1 = 64
 
@@ -10,10 +15,10 @@ class Config(object):
 
         self.cnn_input_channels_3 = 128
         self.cnn_output_channels_3 = 256
-        
+
         # mlp model configs
-        self.mlp_input_channels = 4
-        self.original_seq_len = 537
+        self.mlp_input_channels = 3
+        self.original_seq_len = 500
         self.hidden_channels = 128
         self.mlp_dropout = 0.2
         self.mlp_final_output = 256
@@ -24,7 +29,7 @@ class Config(object):
         self.num_classes = 1  # which means prediction or regression.
         self.dropout = 0.35
         self.features_len = 63
-        
+
         # training configs
         self.num_epoch = 150
 
@@ -33,6 +38,7 @@ class Config(object):
         self.beta1 = 0.9
         self.beta2 = 0.99
         self.lr = 3e-4
+        self.lr_f = 3e-6
 
         # data parameters
         self.drop_last = True

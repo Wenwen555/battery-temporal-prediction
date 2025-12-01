@@ -1,14 +1,27 @@
 #!/bin/bash
-export CUDA_VISIBLE_DEVICES=2
+export CUDA_VISIBLE_DEVICES=0
 
 # Configurable parameters
-dataset="xjtu"           # Can be xjtu, mit, hust, or tongji
+dataset="hust"           # Can be xjtu, mit, hust, or tongji
 training_mode="supervised_with_contrast"
-base_model="cnn"
+base_model="cnn_analyze"
 target_batch="1"          # Set to empty for all batches, or specify a batch number (e.g., 3)
-use_small_sample=true    # Set to false to disable small sampling
-random_select=true     # Set to false to disable random selection
+use_small_sample=false    # Set to false to disable small sampling
+random_select=false     # Set to false to disable random selection
 
+if [ $dataset = "hust" ]; then
+    model_path="/mnt/wenjt5/project1/experiments_logs/hust/cnn_batch1_random_select_0_bat/supervised_with_contrast_seed_123/1/saved_models"
+    manual_path="/mnt/wenjt5/PINN4SOH/data/HUST data/1-4.csv"
+elif [ $dataset = "xjtu" ]; then
+    model_path="/mnt/wenjt5/project1/experiments_logs/xjtu/cnn_xjtu/supervised_with_contrast_seed_123/1/saved_models"
+    manual_path="/mnt/wenjt5/PINN4SOH/data/XJTU data/2C_battery-4.csv"
+elif [ $dataset = "mit" ]; then
+    model_path="/mnt/wenjt5/project1/experiments_logs/mit/batch1/supervised_with_contrast_seed_123/1/saved_models"
+    manual_path="/mnt/wenjt5/PINN4SOH/data/MIT data/2017-05-12/2017-05-12_battery-5.csv"
+elif [ $dataset = "tongji" ]; then
+    model_path=""
+    manual_path=""
+fi
 # Batch number configuration
 declare -A n_value_dict=(
     ["xjtu"]=6
@@ -78,8 +91,9 @@ for small_sample_num in $(get_sample_numbers); do
         else
             run_description="${base_model}_${dataset}_batch${i}_${small_sample_num}bat"
         fi
-        
-        python -m main.py \
+        echo $model_path
+        echo $manual_path
+        python -m representation_analysis \
             --dataset $dataset \
             --experiment_description $dataset \
             --selected_subset $selected_subset \
@@ -88,6 +102,8 @@ for small_sample_num in $(get_sample_numbers); do
             --training_mode $training_mode \
             --data_path ${data_paths[$dataset]} \
             --small_sample_num $small_sample_num \
-            --random_select $random_select
+            --random_select $random_select \
+            --model_path $model_path \
+            --manual_data_path "$manual_path"
     done
 done

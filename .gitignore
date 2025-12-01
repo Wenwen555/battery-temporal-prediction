@@ -5,5 +5,6 @@ __pycache__/
 .rsyncignore/
 .ipynb_checkpoints/
 experiments_logs/
+mi_matrix/
 .ipynb_checkpoints/
 requirements.txt

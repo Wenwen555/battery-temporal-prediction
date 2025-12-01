@@ -135,7 +135,7 @@ def model_train(model,  temporal_contr_model, model_optimizer, temp_cont_optimiz
             loss_mape_supervised = criterion_2(predictions, cycle_labels)
             loss_rmse_supervised = torch.sqrt(loss_mse_supervised)
             
-            loss_rmse = loss_rmse_supervised/loss_rmse_supervised.detach() + 0.5 * cont_loss/cont_loss.detach()
+            loss_rmse = loss_rmse_supervised/loss_rmse_supervised.detach() + 0.6 * cont_loss/cont_loss.detach()
             loss_mape = loss_mape_supervised
             
         else:

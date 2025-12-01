@@ -24,9 +24,7 @@ class base_Model(nn.Module):
         # 取最后一个时间步的输出作为表征
         # h_n 形状: [1, batch * cycles, hidden_size]
         last_hidden = h_n[-1]  # [batch * cycles, hidden_size]
-        # 生成预测结果
         # pred = self.fc_pred(last_hidden)  # [batch * cycles, 1]
-        
         # 生成 256 维输出表征
         features = self.fc_repr(last_hidden)  # [batch * cycles, 256]
         pred = self.fc_pred(features)

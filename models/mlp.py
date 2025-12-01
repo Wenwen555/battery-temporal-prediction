@@ -3,7 +3,7 @@ from torch import nn
 class base_Model(nn.Module):
     def __init__(self, configs):
         super(base_Model, self).__init__()
-        self.fc1 = nn.Linear(configs.mlp_input_channels * configs.original_seq_len,configs.hidden_channels)
+        self.fc1 = nn.Linear(configs.mlp_input_channels * configs.original_seq_len, configs.hidden_channels)
         self.fc2 = nn.Linear(configs.hidden_channels,configs.hidden_channels)
         self.fc3 = nn.Linear(configs.hidden_channels, configs.mlp_final_output)
         
@@ -14,7 +14,8 @@ class base_Model(nn.Module):
         # 输入形状: [batch_size, cycles, features, seq_len]
         batch_size, cycles, features, seq_len = x.shape
         x = x.view(batch_size, cycles, -1)  # 形状变为 [batch_size, cycles, features * seq_len]
-        
+        # import ipdb
+        # ipdb.set_trace()
         x = self.fc1(x)
         x = self.dropout(x)
         x = self.fc2(x)

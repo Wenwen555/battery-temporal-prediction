@@ -17,8 +17,6 @@ class base_Model(nn.Module):
             # nn.MaxPool1d(kernel_size=2, stride=2),
             nn.AdaptiveAvgPool1d(output_size=1)
         )
-        
-        # 全连接层：生成预测结果 (32, 30)
         self.fc = nn.Linear(configs.cnn_output_channels_3, 1)
 
     def forward(self, x):
